@@ -37,14 +37,21 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     <a href="#" class="w3-bar-item w3-button w3-padding w3-hover-white"><i class="fa fa-home fa-fw"></i>&nbsp; Home</a>
     <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-bar-item w3-button w3-padding w3-hover-white" id="myBtn"><i class="fa fa-users fa-fw"></i>&nbsp; Duties <i class="fa fa-caret-down"></i>
 </a>
-        <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+        <div id="dropdown" class="w3-bar-block w3-hide w3-padding-large w3-medium">
           <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>OK1</b></a>
           <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>OK2</b></a>
           <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>OK3</b></a>
           <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>OK4</b></a>
     </div>
     <a href="#" class="w3-bar-item w3-button w3-padding w3-hover-white"><i class="fa fa-bolt fa-fw"></i>&nbsp; Parameters</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding w3-hover-white"><i class="fa fa-globe fa-fw"></i>&nbsp; Regions</a><br><br>
+    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-bar-item w3-button w3-padding w3-hover-white" id="myBtn"><i class="fa fa-globe fa-fw"></i>&nbsp; Regions <i class="fa fa-caret-down"></i></a>
+        <div id="dropdown" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>OK1</b></a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>OK2</b></a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>OK3</b></a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>OK4</b></a>
+    </div>
+    <br><br>
   </div>
 </nav>
 
@@ -688,7 +695,7 @@ function w3_close() {
   
 // Accordion 
 function myAccFunc() {
-    var x = document.getElementById("demoAcc");
+    var x = document.getElementById("dropdown");
     if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
     } else {
@@ -697,7 +704,7 @@ function myAccFunc() {
 }
 
 // Click on the "Duties" link on page load to open the accordion for demo purposes
-document.getElementById("myBtn").click();  
+// document.getElementById("myBtn").click();  
   
 </script>
 

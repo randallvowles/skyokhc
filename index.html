@@ -35,7 +35,14 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   <div class="w3-bar-block w3-large">
     
     <a href="#" class="w3-bar-item w3-button w3-padding w3-hover-white"><i class="fa fa-home fa-fw"></i>&nbsp; Home</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding w3-hover-white"><i class="fa fa-users fa-fw"></i>&nbsp; Duties</a>
+    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-bar-item w3-button w3-padding w3-hover-white" id="myBtn"><i class="fa fa-users fa-fw"></i>&nbsp; Duties<i class="fa fa-caret-down"></i>
+</a>
+        <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+      <a href="#" class="w3-bar-item w3-button w3-hover-white">OK1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-white">OK2</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-white">OK3</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-white">OK4</a>
+
     <a href="#" class="w3-bar-item w3-button w3-padding w3-hover-white"><i class="fa fa-bolt fa-fw"></i>&nbsp; Parameters</a>
     <a href="#" class="w3-bar-item w3-button w3-padding w3-hover-white"><i class="fa fa-globe fa-fw"></i>&nbsp; Regions</a><br><br>
   </div>
@@ -678,6 +685,20 @@ function w3_close() {
     mySidebar.style.display = "none";
     overlayBg.style.display = "none";
 }
+  
+// Accordion 
+function myAccFunc() {
+    var x = document.getElementById("demoAcc");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// Click on the "Duties" link on page load to open the accordion for demo purposes
+document.getElementById("myBtn").click();  
+  
 </script>
 
 </body>

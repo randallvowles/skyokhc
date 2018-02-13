@@ -44,12 +44,20 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
           <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>OK4</b></a>
     </div>
     <a href="#" class="w3-bar-item w3-button w3-padding w3-hover-white"><i class="fa fa-bolt fa-fw"></i>&nbsp; Parameters</a>
-    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-bar-item w3-button w3-padding w3-hover-white" id="myBtn"><i class="fa fa-globe fa-fw"></i>&nbsp; Regions <i class="fa fa-caret-down"></i></a>
-        <div id="dropdown" class="w3-bar-block w3-hide w3-padding-large w3-medium">
-          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>OK1</b></a>
-          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>OK2</b></a>
-          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>OK3</b></a>
-          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>OK4</b></a>
+    <a onclick="myAccFunc2()" href="javascript:void(0)" class="w3-bar-item w3-button w3-padding w3-hover-white" id="myBtn2"><i class="fa fa-globe fa-fw"></i>&nbsp; Regions <i class="fa fa-caret-down"></i></a>
+        <div id="dropdown2" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>CONUS</b></a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>EUROPE</b></a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>CHINA / KOREA</b></a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>JAPAN</b></a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>RUSSIA</b></a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>SE ASIA</b></a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>INDIA</b></a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>MIDDLE EAST</b></a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>N PACIFIC</b></a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>AFRICA</b></a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>OCEANIA</b></a>
+          
     </div>
     <br><br>
   </div>
@@ -702,7 +710,14 @@ function myAccFunc() {
         x.className = x.className.replace(" w3-show", "");
     }
 }
-
+function myAccFunc2() {
+    var x = document.getElementById("dropdown2");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
 // Click on the "Duties" link on page load to open the accordion for demo purposes
 // document.getElementById("myBtn").click();  
   

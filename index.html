@@ -43,7 +43,6 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
           <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>OK3</b></a>
           <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>OK4</b></a>
     </div>
-    <a href="#" class="w3-bar-item w3-button w3-padding w3-hover-white"><i class="fa fa-bolt fa-fw"></i>&nbsp; Parameters</a>
     <a onclick="myAccFunc2()" href="javascript:void(0)" class="w3-bar-item w3-button w3-padding w3-hover-white" id="myBtn2"><i class="fa fa-globe fa-fw"></i>&nbsp; Regions <i class="fa fa-caret-down"></i></a>
         <div id="dropdown2" class="w3-bar-block w3-hide w3-padding-large w3-medium">
           <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>CONUS</b></a>
@@ -57,7 +56,21 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
           <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>N PACIFIC</b></a>
           <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>AFRICA</b></a>
           <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>OCEANIA</b></a>
-          
+    </div>
+    <a onclick="myAccFunc3()" href="javascript:void(0)" id="myBtn3" class="w3-bar-item w3-button w3-padding w3-hover-white"><i class="fa fa-bolt fa-fw"></i>&nbsp; Parameters <i class="fa fa-caret-down"></i></a>
+    <div id="dropdown3" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>RADAR</b></a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>SATELLITE</b></a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>LIGHTNING</b></a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>SURFACE OBSERVATIONS</b></a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>SURFACE ANALYSIS</b></a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>NWP MODELS</b></a>
+<!--           <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>SE ASIA</b></a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>INDIA</b></a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>MIDDLE EAST</b></a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>N PACIFIC</b></a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>AFRICA</b></a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>OCEANIA</b></a> -->
     </div>
     <br><br>
   </div>
@@ -712,6 +725,14 @@ function myAccFunc() {
 }
 function myAccFunc2() {
     var x = document.getElementById("dropdown2");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+  function myAccFunc3() {
+    var x = document.getElementById("dropdown3");
     if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
     } else {

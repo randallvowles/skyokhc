@@ -131,39 +131,39 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
 <!-- 			<h5 align="center">by <a href="mailto:tim.brice@noaa.gov">Tim Brice</a> and <a href="mailto:todd.hall@noaa.gov">Todd Hall</a></h5> -->
 
-			<h5 align="left"><font color="#ff0000">Enter a wind speed that you would like:</font></h5>
+			<h5 align="center">Enter a wind speed that you would like:</h5>
 
 			<form name="Convert">&nbsp;
 
 			<table align="center" border="1" width="100%">
 				<tbody>
 					<tr>
-						<td><font color="#ff0000"><input name="Windspeed" size="5" type="text" /></font></td>
-						<td><font color="#ff0000">Answers:</font></td>
+						<td><input name="Windspeed" size="5" type="text" /></td>
+						<td>>Answers:</td>
 					</tr>
 					<tr>
-						<td><font color="#ff0000"><input checked="checked" name="windunit" type="radio" value="on" /> mph (miles per hour)</font></td>
-						<td><font color="#ff0000"><input name="Mph" size="5" type="text" /> mph</font></td>
+						<td><input checked="checked" name="windunit" type="radio" value="on" /> mph (miles per hour)</td>
+						<td><input name="Mph" size="5" type="text" /> mph</td>
 					</tr>
 					<tr>
-						<td><font color="#ff0000"><input name="windunit" type="radio" value="on" />knots</font></td>
-						<td><font color="#ff0000"><input name="Knots" size="5" type="text" /> knots</font></td>
+						<td><input name="windunit" type="radio" value="on" />knots</td>
+						<td><input name="Knots" size="5" type="text" /> knots</td>
 					</tr>
 					<tr>
-						<td><font color="#ff0000"><input name="windunit" type="radio" value="on" /> m/s (meters per second)</font></td>
-						<td><font color="#ff0000"><input name="Mps" size="5" type="text" /> m/s</font></td>
+						<td><input name="windunit" type="radio" value="on" /> m/s (meters per second)</td>
+						<td><input name="Mps" size="5" type="text" /> m/s</td>
 					</tr>
 					<tr>
-						<td><font color="#ff0000"><input name="windunit" type="radio" value="on" /> ft/s (feet per second)</font></td>
-						<td><font color="#ff0000"><input name="Ftps" size="5" type="text" /> ft/s</font></td>
+						<td><input name="windunit" type="radio" value="on" /> ft/s (feet per second)</td>
+						<td><input name="Ftps" size="5" type="text" /> ft/s</td>
 					</tr>
 					<tr>
-						<td><font color="#ff0000"><input name="windunit" type="radio" value="on" /> km/h (kilometers per hour)</font></td>
-						<td><font color="#ff0000"><input name="Kmph" size="5" type="text" /> km/h</font></td>
+						<td><input name="windunit" type="radio" value="on" /> km/h (kilometers per hour)</td>
+						<td><input name="Kmph" size="5" type="text" /> km/h</td>
 					</tr>
 					<tr>
-						<td><font color="#ff0000"><input onclick="decideConvert(document.Convert.Windspeed.value)" type="button" value="Convert" /></font></td>
-						<td><font color="#ff0000"><input onclick="setToNull()" type="button" value="Clear Values" /></font></td>
+						<td><input onclick="decideConvert(document.Convert.Windspeed.value)" type="button" value="Convert" /></td>
+						<td><input onclick="setToNull()" type="button" value="Clear Values" /></td>
 					</tr>
 				</tbody>
 			</table>
@@ -180,59 +180,49 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 </div>
       <form>
          <div align="center">
-		 <p>Relative Humidity Calculator<br>
-<FONT SIZE=3>
-Enter a temperature and a dew point, in either <br>
-Fahrenheit or Celsius. Then click Calculate.
-</font>
-</font>
-</p><center><br>
-         <table border="3" width="289">
+	<h2>Relative Humidity Calculator<h2><br>
+<h5>Enter a temperature and a dew point, in either <br>
+	Fahrenheit or Celsius. Then click Calculate.
+<br>
+         <table border="3" width="525">
             <tr>
                <th width="50%">
-                  <span style="font-weight: 400"><font face="Arial" size="2">
-					Temperature</font></span></th>
+                  <span>Temperature</span></th>
                <th width="50%">
-                  <span style="font-weight: 400"><font size="2" face="Arial">Dew Point</font></span></th>
+		  <span>Dew Point</span></th>
             </tr>
             <tr>
                <td width="50%">
                   <center>
-                     <font face="Arial">
-                     <input size="8" name="inputbox1" onChange="eval('c.value = ' + this.form.Cexpr.value)"></font><font size="2" face="Arial">°F</font><font face="Arial"><INPUT TYPE="hidden" NAME="Cexpr" VALUE="((Math.round((100/(212-32) * (inputbox1.value - 32))*100)))/100"><input Type="hidden" name="Fexpr" value="(Math.round(((212-32)/100 * c.value + 32)*100))/100"></font><font size="2" face="Arial"><br> 
-						</font><font face="Arial"> 
-						<INPUT name="c"  onChange="eval('inputbox1.value = ' + this.form.Fexpr.value)" size="8"></font><font size="2" face="Arial">°C</font></center>
+                     <input size="8" name="inputbox1" onChange="eval('c.value = ' + this.form.Cexpr.value)">°F<INPUT TYPE="hidden" NAME="Cexpr" VALUE="((Math.round((100/(212-32) * (inputbox1.value - 32))*100)))/100">
+			  <input Type="hidden" name="Fexpr" value="(Math.round(((212-32)/100 * c.value + 32)*100))/100"><br> 
+			<INPUT name="c"  onChange="eval('inputbox1.value = ' + this.form.Fexpr.value)" size="8">°C</center>
                </td>
                
-<INPUT TYPE="hidden" NAME="Cexpr2" VALUE="((Math.round((100/(212-32) * (inputbox2.value - 32))*100)))/100"><input Type="hidden" name="Fexpr2" value="(Math.round(((212-32)/100 * c2.value + 32)*100))/100">               
+<INPUT TYPE="hidden" NAME="Cexpr2" VALUE="((Math.round((100/(212-32) * (inputbox2.value - 32))*100)))/100">
+	<input Type="hidden" name="Fexpr2" value="(Math.round(((212-32)/100 * c2.value + 32)*100))/100">               
                
                
                <td width="50%">
                   <center>
-                     <font face="Arial">
-                     <input size="8" name="inputbox2" onChange="eval('c2.value = ' + this.form.Cexpr2.value)" onKeyDown="if(event.keyCode==13) event.keyCode=9;"></font><font size="2" face="Arial">°F<br>
-                      </font><font face="Arial">
-                      <INPUT name="c2"  onChange="eval('inputbox2.value = ' + this.form.Fexpr2.value)" onKeyDown="if(event.keyCode==13) event.keyCode=9;"size="8"></font><font size="2" face="Arial">°C</font></center>
+                    <input size="8" name="inputbox2" onChange="eval('c2.value = ' + this.form.Cexpr2.value)" onKeyDown="if(event.keyCode==13) event.keyCode=9;">°F<br>
+                      <INPUT name="c2"  onChange="eval('inputbox2.value = ' + this.form.Fexpr2.value)" onKeyDown="if(event.keyCode==13) event.keyCode=9;"size="8"></center>
                </td>
             </tr>
             <tr>
                <td colspan="2" align="center" width="50%">
-                  <font size="2" face="Arial">&nbsp; </font>
-            		<font face="Arial">&nbsp; 
-					<input type="button" name="C2F" value="Calculate" onclick=
+                  <font size="2">&nbsp; </font>
+            		<font>&nbsp;<input type="button" name="C2F" value="Calculate" onclick=
                   "inputtest(this.form,this)">&nbsp;&nbsp; </font>
             <input type="reset" value="Reset"></td>
                
                
             </tr>
             <tr>
-               <td colspan="2" align="center" width="50%">
-                  <font size="2" face="Arial">Relative Humidity</font></td>
+               <td colspan="2" align="center" width="50%">Relative Humidity</td>
             </tr>
             <tr>
-               <td colspan="2" align="center" width="50%">
-                  <font size="2" face="Arial">&nbsp;  </font><font face="Arial">  
-					<input size="8" name="outputbox1"><font size="2"> %</font></font></td>
+               <td colspan="2" align="center" width="50%">&nbsp;<input size="8" name="outputbox1"><font size="2"> %</td>
             </tr>
          </table>
          </div>

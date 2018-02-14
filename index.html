@@ -118,15 +118,259 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
         <td><a href="https://en.wikipedia.org/wiki/Metar">METAR Wikipedia</a></td>
         <td>METAR information and decoding</td>
       </tr>
-
     </table><br>
-
 </div>
 <hr>
+<div class="div-full">
+  <div class="cms-content"><SCRIPT LANGUAGE="JavaScript">
+			function decideConvert(speed)
+			{
+				speed = parseFloat(document.Convert.Windspeed.value);
+				
+				if (document.Convert.windunit[0].checked)
+				{
+					document.Convert.Mph.value = roundOff(speed);
+					document.Convert.Knots.value = roundOff(convertmphtoknots(speed));
+					document.Convert.Mps.value = roundOff(convertmphtomps(speed));
+					document.Convert.Ftps.value = roundOff(convertmphtoftps(speed));
+					document.Convert.Kmph.value = roundOff(convertmphtokmph(speed));					
+				}
+
+				else if (document.Convert.windunit[1].checked)
+				{
+					document.Convert.Mph.value = roundOff(convertknotstomph(speed));
+					document.Convert.Knots.value = roundOff(speed);
+					document.Convert.Mps.value = roundOff(convertknotstomps(speed));
+					document.Convert.Ftps.value = roundOff(convertknotstoftps(speed));
+					document.Convert.Kmph.value = roundOff(convertknotstokmph(speed));
+				}
+
+				else if (document.Convert.windunit[2].checked)
+				{
+					document.Convert.Mph.value = roundOff(convertmpstomph(speed));
+					document.Convert.Knots.value = roundOff(convertmpstoknots(speed));
+					document.Convert.Mps.value = roundOff(speed);
+					document.Convert.Ftps.value = roundOff(convertmpstoftps(speed));
+					document.Convert.Kmph.value = roundOff(convertmpstokmph(speed));
+				}
+
+				else if (document.Convert.windunit[3].checked)
+				{
+					document.Convert.Mph.value = roundOff(convertftpstomph(speed));
+					document.Convert.Knots.value = roundOff(convertftpstoknots(speed));
+					document.Convert.Mps.value = roundOff(convertftpstomps(speed));
+					document.Convert.Ftps.value =  roundOff(speed);
+					document.Convert.Kmph.value = roundOff(convertftpstokmph(speed));
+				}
+
+				else if (document.Convert.windunit[4].checked)
+				{
+					document.Convert.Mph.value = roundOff(convertkmphtomph(speed));
+					document.Convert.Knots.value = roundOff(convertkmphtoknots(speed));
+					document.Convert.Mps.value = roundOff(convertkmphtomps(speed));
+					document.Convert.Ftps.value = roundOff(convertkmphtoftps(speed));
+					document.Convert.Kmph.value = roundOff(speed);
+				}
+			}
+
+			function convertmphtoknots(mph)
+			{
+				knots = 0.8689762 * mph;
+				return knots;
+			}
+
+			function convertmphtomps(mph)
+			{
+				mps = 0.44704 * mph;
+				return mps;
+			}
+
+			function convertmphtoftps(mph)
+			{
+				ftps = 1.46667 * mph;
+				return ftps;
+			}
+
+			function convertmphtokmph(mph)
+			{
+				kmph = 1.609344 * mph;
+				return kmph;
+			}
+
+			function convertknotstomph(knots)
+			{
+				mph = 1.1507794 * knots;
+				return mph;
+			}
+
+			function convertknotstomps(knots)
+			{
+				mps = 0.5144444 * knots;
+				return mps;
+			}
+			
+			function convertknotstoftps(knots)
+			{
+				ftps = 1.6878099 * knots;
+				return ftps;
+			}
+			
+			function convertknotstokmph(knots)
+			{
+				kmph = 1.85325 * knots;
+				return kmph;
+			}
+			
+			function convertmpstomph(mps)
+			{
+				mph = 2.23694*mps;
+				return mph;
+			}
+			
+			function convertmpstoknots(mps)
+			{
+				knots = 1.9438445 * mps;
+				return knots;
+			}
+
+			function convertmpstoftps(mps)
+			{
+				ftps = 3.28084 * mps;
+				return ftps;
+			}
+			
+			function convertmpstokmph(mps)
+			{
+				kmph = 3.6 * mps;
+				return kmph
+			}
+			
+			function convertftpstomph(ftps)
+			{
+				mph = 0.681818*ftps;
+				return mph;
+			}
+
+			function convertftpstoknots(ftps)
+			{
+				knots =  0.5924838 * ftps;
+				return knots;
+			}
+			
+			function convertftpstomps(ftps)
+			{
+				mps =  0.3048 * ftps;
+				return mps;
+			}
+			
+			function convertftpstokmph(ftps)
+			{
+				kmph = 1.09728 * ftps;
+				return kmph;
+			}
+			
+			function convertkmphtomph(kmph)
+			{
+				mph = 0.621371*kmph;
+				return mph;
+			}
+			
+			function convertkmphtoknots(kmph)
+			{
+				knots = 0.539593 * kmph;
+				return knots;
+			}
+			
+			function convertkmphtomps(kmph)
+			{
+				mps = 0.277778 * kmph;
+				return mps;
+			}
+			
+			function convertkmphtoftps(kmph)
+			{
+				ftps = 0.911344 * kmph;
+				return ftps;
+			}				
+				
+			function roundOff(value)
+			{
+				value = Math.round(10*value)/10;
+				return value;
+			}
+
+			function setToNull()
+			{
+				document.Convert.Mph.value="";
+				document.Convert.Mps.value="";
+				document.Convert.Kmph.value="";
+				document.Convert.Knots.value="";
+				document.Convert.Ftps.value="";
+				document.Convert.Windspeed.value="";
+			}
+		</SCRIPT>
+<table border="0" cellpadding="4" cellspacing="0" width="525">
+	<tbody>
+		<tr>
+			<td align="center">
+			<h2 align="center">Wind Speed Conversion</h2>
+
+<!-- 			<h5 align="center">by <a href="mailto:tim.brice@noaa.gov">Tim Brice</a> and <a href="mailto:todd.hall@noaa.gov">Todd Hall</a></h5> -->
+
+			<h5 align="left"><font color="#ff0000">Enter a wind speed that you would like:</font></h5>
+
+			<form name="Convert">&nbsp;
+
+			<table align="center" border="1" width="100%">
+				<tbody>
+					<tr>
+						<td><font color="#ff0000"><input name="Windspeed" size="5" type="text" /></font></td>
+						<td><font color="#ff0000">Answers:</font></td>
+					</tr>
+					<tr>
+						<td><font color="#ff0000"><input checked="checked" name="windunit" type="radio" value="on" /> mph (miles per hour)</font></td>
+						<td><font color="#ff0000"><input name="Mph" size="5" type="text" /> mph</font></td>
+					</tr>
+					<tr>
+						<td><font color="#ff0000"><input name="windunit" type="radio" value="on" />knots</font></td>
+						<td><font color="#ff0000"><input name="Knots" size="5" type="text" /> knots</font></td>
+					</tr>
+					<tr>
+						<td><font color="#ff0000"><input name="windunit" type="radio" value="on" /> m/s (meters per second)</font></td>
+						<td><font color="#ff0000"><input name="Mps" size="5" type="text" /> m/s</font></td>
+					</tr>
+					<tr>
+						<td><font color="#ff0000"><input name="windunit" type="radio" value="on" /> ft/s (feet per second)</font></td>
+						<td><font color="#ff0000"><input name="Ftps" size="5" type="text" /> ft/s</font></td>
+					</tr>
+					<tr>
+						<td><font color="#ff0000"><input name="windunit" type="radio" value="on" /> km/h (kilometers per hour)</font></td>
+						<td><font color="#ff0000"><input name="Kmph" size="5" type="text" /> km/h</font></td>
+					</tr>
+					<tr>
+						<td><font color="#ff0000"><input onclick="decideConvert(document.Convert.Windspeed.value)" type="button" value="Convert" /></font></td>
+						<td><font color="#ff0000"><input onclick="setToNull()" type="button" value="Clear Values" /></font></td>
+					</tr>
+				</tbody>
+			</table>
+            </form>
+
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+</div>
+            </div>
+            <div style="clear:both"></div>
+            
 
   <!-- End page content -->
 </div>
 
+  
+  
 <script>
 // Get the Sidebar
 var mySidebar = document.getElementById("mySidebar");

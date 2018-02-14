@@ -124,7 +124,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 </div>
 <hr>
 <div class="div-full">
-  <div class="cms-content">
+  <div>
 <table border="3" cellpadding="4" cellspacing="0" width="525" >
 	<tbody>
 		<tr>
@@ -170,40 +170,24 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 		</tr>
 	</tbody>
 </table>
-</div>
-
-      
-         <div align="center">
-		 <form>
-
-         <table border="3" width="525" cellpadding="4" cellspacing="0">
-		 		<tr>
-			<td align="center">
-		 	<h2>Relative Humidity Calculator</h2><br>
+    <table border="3" width="525" cellpadding="4" cellspacing="0">
+	<tr><td align="center">
+	<h2>Relative Humidity Calculator</h2><br>
 	<h5>Enter a temperature and a dew point, in either Fahrenheit or Celsius. Then click Calculate.</h5>
 	<table align="center" border="1" width="100%">
-            <tr>
-               <th width="50%">
-                  <span>Temperature</span></th>
-               <th width="50%">
-		  <span>Dew Point</span></th>
+            <tr><th width="50%"><span>Temperature</span></th>
+               <th width="50%"><span>Dew Point</span></th>
             </tr>
-            <tr>
-               <td width="50%">
-                  <center>
-                     <input size="8" name="inputbox1" onChange="eval('c.value = ' + this.form.Cexpr.value)">°F<INPUT TYPE="hidden" NAME="Cexpr" VALUE="((Math.round((100/(212-32) * (inputbox1.value - 32))*100)))/100">
-			  <input Type="hidden" name="Fexpr" value="(Math.round(((212-32)/100 * c.value + 32)*100))/100"><br> 
-			<INPUT name="c"  onChange="eval('inputbox1.value = ' + this.form.Fexpr.value)" size="8">°C</center>
-               </td>
-               
-<INPUT TYPE="hidden" NAME="Cexpr2" VALUE="((Math.round((100/(212-32) * (inputbox2.value - 32))*100)))/100">
-	<input Type="hidden" name="Fexpr2" value="(Math.round(((212-32)/100 * c2.value + 32)*100))/100">               
-               
-               
-               <td width="50%">
-                  <center>
-                    <input size="8" name="inputbox2" onChange="eval('c2.value = ' + this.form.Cexpr2.value)" onKeyDown="if(event.keyCode==13) event.keyCode=9;">°F<br>
-                      <INPUT name="c2"  onChange="eval('inputbox2.value = ' + this.form.Fexpr2.value)" onKeyDown="if(event.keyCode==13) event.keyCode=9;"size="8"></center>
+            <tr><td width="50%"><center>
+               <input size="8" name="inputbox1" onChange="eval('c.value = ' + this.form.Cexpr.value)">°F<INPUT TYPE="hidden" NAME="Cexpr" VALUE="((Math.round((100/(212-32) * (inputbox1.value - 32))*100)))/100">
+		<input Type="hidden" name="Fexpr" value="(Math.round(((212-32)/100 * c.value + 32)*100))/100"><br> 
+		<INPUT name="c"  onChange="eval('inputbox1.value = ' + this.form.Fexpr.value)" size="8">°C</center>
+            </td>
+            <INPUT TYPE="hidden" NAME="Cexpr2" VALUE="((Math.round((100/(212-32) * (inputbox2.value - 32))*100)))/100">
+	       <input Type="hidden" name="Fexpr2" value="(Math.round(((212-32)/100 * c2.value + 32)*100))/100">               
+               <td width="50%"><center>
+               <input size="8" name="inputbox2" onChange="eval('c2.value = ' + this.form.Cexpr2.value)" onKeyDown="if(event.keyCode==13) event.keyCode=9;">°F<br>
+               <INPUT name="c2"  onChange="eval('inputbox2.value = ' + this.form.Fexpr2.value)" onKeyDown="if(event.keyCode==13) event.keyCode=9;"size="8"></center>
                </td>
             </tr>
             <tr>
@@ -224,18 +208,13 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
          </table>
 	</td>
 	</table>
-    </form>
     </div>
-  
-	</div>
   <p>&nbsp;</p>
 <hr>          
-
-  <!-- End page content -->
 </div>
+	  
+<!-- End page content -->
 
-  
-  
 <script language="JavaScript" type="text/javascript">
 function tonum(obj)
 {

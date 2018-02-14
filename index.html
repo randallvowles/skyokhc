@@ -122,7 +122,207 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 </div>
 <hr>
 <div class="div-full">
-  <div class="cms-content"><SCRIPT LANGUAGE="JavaScript">
+  <div class="cms-content">
+<table border="0" cellpadding="4" cellspacing="0" width="525">
+	<tbody>
+		<tr>
+			<td align="center">
+			<h2 align="center">Wind Speed Conversion</h2>
+
+<!-- 			<h5 align="center">by <a href="mailto:tim.brice@noaa.gov">Tim Brice</a> and <a href="mailto:todd.hall@noaa.gov">Todd Hall</a></h5> -->
+
+			<h5 align="left"><font color="#ff0000">Enter a wind speed that you would like:</font></h5>
+
+			<form name="Convert">&nbsp;
+
+			<table align="center" border="1" width="100%">
+				<tbody>
+					<tr>
+						<td><font color="#ff0000"><input name="Windspeed" size="5" type="text" /></font></td>
+						<td><font color="#ff0000">Answers:</font></td>
+					</tr>
+					<tr>
+						<td><font color="#ff0000"><input checked="checked" name="windunit" type="radio" value="on" /> mph (miles per hour)</font></td>
+						<td><font color="#ff0000"><input name="Mph" size="5" type="text" /> mph</font></td>
+					</tr>
+					<tr>
+						<td><font color="#ff0000"><input name="windunit" type="radio" value="on" />knots</font></td>
+						<td><font color="#ff0000"><input name="Knots" size="5" type="text" /> knots</font></td>
+					</tr>
+					<tr>
+						<td><font color="#ff0000"><input name="windunit" type="radio" value="on" /> m/s (meters per second)</font></td>
+						<td><font color="#ff0000"><input name="Mps" size="5" type="text" /> m/s</font></td>
+					</tr>
+					<tr>
+						<td><font color="#ff0000"><input name="windunit" type="radio" value="on" /> ft/s (feet per second)</font></td>
+						<td><font color="#ff0000"><input name="Ftps" size="5" type="text" /> ft/s</font></td>
+					</tr>
+					<tr>
+						<td><font color="#ff0000"><input name="windunit" type="radio" value="on" /> km/h (kilometers per hour)</font></td>
+						<td><font color="#ff0000"><input name="Kmph" size="5" type="text" /> km/h</font></td>
+					</tr>
+					<tr>
+						<td><font color="#ff0000"><input onclick="decideConvert(document.Convert.Windspeed.value)" type="button" value="Convert" /></font></td>
+						<td><font color="#ff0000"><input onclick="setToNull()" type="button" value="Clear Values" /></font></td>
+					</tr>
+				</tbody>
+			</table>
+            </form>
+
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+<hr>
+</div>
+</div>
+      <form>
+         <div align="center">
+         <table border="3" width="289">
+            <tr>
+               <th width="50%">
+                  <span style="font-weight: 400"><font face="Arial" size="2">
+					Temperature</font></span></th>
+               <th width="50%">
+                  <span style="font-weight: 400"><font size="2" face="Arial">Dew Point</font></span></th>
+            </tr>
+            <tr>
+               <td width="50%">
+                  <center>
+                     <font face="Arial">
+                     <input size="8" name="inputbox1" onChange="eval('c.value = ' + this.form.Cexpr.value)"></font><font size="2" face="Arial">°F</font><font face="Arial"><INPUT TYPE="hidden" NAME="Cexpr" VALUE="((Math.round((100/(212-32) * (inputbox1.value - 32))*100)))/100"><input Type="hidden" name="Fexpr" value="(Math.round(((212-32)/100 * c.value + 32)*100))/100"></font><font size="2" face="Arial"><br> 
+						</font><font face="Arial"> 
+						<INPUT name="c"  onChange="eval('inputbox1.value = ' + this.form.Fexpr.value)" size="8"></font><font size="2" face="Arial">°C</font></center>
+               </td>
+               
+<INPUT TYPE="hidden" NAME="Cexpr2" VALUE="((Math.round((100/(212-32) * (inputbox2.value - 32))*100)))/100"><input Type="hidden" name="Fexpr2" value="(Math.round(((212-32)/100 * c2.value + 32)*100))/100">               
+               
+               
+               <td width="50%">
+                  <center>
+                     <font face="Arial">
+                     <input size="8" name="inputbox2" onChange="eval('c2.value = ' + this.form.Cexpr2.value)" onKeyDown="if(event.keyCode==13) event.keyCode=9;"></font><font size="2" face="Arial">°F<br>
+                      </font><font face="Arial">
+                      <INPUT name="c2"  onChange="eval('inputbox2.value = ' + this.form.Fexpr2.value)" onKeyDown="if(event.keyCode==13) event.keyCode=9;"size="8"></font><font size="2" face="Arial">°C</font></center>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" align="center" width="50%">
+                  <font size="2" face="Arial">&nbsp; </font>
+            		<font face="Arial">&nbsp; 
+					<input type="button" name="C2F" value="Calculate" onclick=
+                  "inputtest(this.form,this)">&nbsp;&nbsp; </font>
+            <input type="reset" value="Reset"></td>
+               
+               
+            </tr>
+            <tr>
+               <td colspan="2" align="center" width="50%">
+                  <font size="2" face="Arial">Relative Humidity</font></td>
+            </tr>
+            <tr>
+               <td colspan="2" align="center" width="50%">
+                  <font size="2" face="Arial">&nbsp;  </font><font face="Arial">  
+					<input size="8" name="outputbox1"><font size="2"> %</font></font></td>
+            </tr>
+         </table>
+         </div>
+      </form>
+            
+
+  <!-- End page content -->
+</div>
+
+  
+  
+<script language="JavaScript" type="text/javascript">
+function tonum(obj)
+{
+ return parseFloat(obj);
+}
+function inputtest(form, button)
+{
+ cal_humid(form);
+ return;
+
+}
+
+function cal_humid(form)
+
+{
+    var a=tonum(form.inputbox1.value);//Air Temperature
+    var b=tonum(form.inputbox2.value);//Dew Point
+
+    if (form.inputbox1.value == "") { 
+      alert("Enter a Temperature value")
+    }
+    else if (form.inputbox2.value == "") { 
+      alert("Enter a Dew Point value") 
+    } else if (a < b) { 
+        alert("Dew Point cannot be greater than temperature")
+    }
+    else 
+    {
+       var a=tonum(form.inputbox1.value);//Air Temperature
+       var b=tonum(form.inputbox2.value);//Dew Point
+       var a_c = (5.0/9.0)*(a-32.0);
+       var b_c = (5.0/9.0)*(b-32.0);
+       var c=6.11*Math.pow(10,((7.5*a_c/(237.7+a_c))));//saturation vapor pressure
+       var d=6.11*Math.pow(10,((7.5*b_c/(237.7+b_c))));//actual vapor pressure
+       var e=(d/c)*100;//relative humidity 
+}
+
+{
+
+form.outputbox1.value=(Math.round(e*100))/100;//Relative Humidity
+}
+}
+function inputtest1(form, button)
+{
+ cal_humid1(form);
+ return;
+
+}
+
+function cal_humid1(form)
+{
+
+var m=tonum(form.inputbox3.value);//Air Temperature
+var n=tonum(form.inputbox4.value);//Wet Bulb temperature
+var k=tonum(form.inputbox5.value);//Pressure
+
+var p=21.40-(5351/(m+273.15));
+var q=21.40-(5351/(n+273.15));
+
+
+var z=Math.exp(p);
+var y=Math.exp(q);
+
+//calculate the vapor pressure and saturation vapor pressure
+
+var s=y-(k*(m-n)/1555);
+var w=z;
+
+//calculate the dewpoint and relative humidity
+
+ 
+var l=Math.log(s);
+
+var u=(5351/(21.40-l))-273.15; //dewpoint 
+
+
+var r=100*s/w;// relative humidity
+
+
+{
+
+form.outputbox2.value=(Math.round(r*100))/100;//Relative Humidity
+form.outputbox3.value=(Math.round(u*100))/100;//Dew Point
+}
+}
+	
 			function decideConvert(speed)
 			{
 				speed = parseFloat(document.Convert.Windspeed.value);
@@ -308,70 +508,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 				document.Convert.Ftps.value="";
 				document.Convert.Windspeed.value="";
 			}
-		</SCRIPT>
-<table border="0" cellpadding="4" cellspacing="0" width="525">
-	<tbody>
-		<tr>
-			<td align="center">
-			<h2 align="center">Wind Speed Conversion</h2>
-
-<!-- 			<h5 align="center">by <a href="mailto:tim.brice@noaa.gov">Tim Brice</a> and <a href="mailto:todd.hall@noaa.gov">Todd Hall</a></h5> -->
-
-			<h5 align="left"><font color="#ff0000">Enter a wind speed that you would like:</font></h5>
-
-			<form name="Convert">&nbsp;
-
-			<table align="center" border="1" width="100%">
-				<tbody>
-					<tr>
-						<td><font color="#ff0000"><input name="Windspeed" size="5" type="text" /></font></td>
-						<td><font color="#ff0000">Answers:</font></td>
-					</tr>
-					<tr>
-						<td><font color="#ff0000"><input checked="checked" name="windunit" type="radio" value="on" /> mph (miles per hour)</font></td>
-						<td><font color="#ff0000"><input name="Mph" size="5" type="text" /> mph</font></td>
-					</tr>
-					<tr>
-						<td><font color="#ff0000"><input name="windunit" type="radio" value="on" />knots</font></td>
-						<td><font color="#ff0000"><input name="Knots" size="5" type="text" /> knots</font></td>
-					</tr>
-					<tr>
-						<td><font color="#ff0000"><input name="windunit" type="radio" value="on" /> m/s (meters per second)</font></td>
-						<td><font color="#ff0000"><input name="Mps" size="5" type="text" /> m/s</font></td>
-					</tr>
-					<tr>
-						<td><font color="#ff0000"><input name="windunit" type="radio" value="on" /> ft/s (feet per second)</font></td>
-						<td><font color="#ff0000"><input name="Ftps" size="5" type="text" /> ft/s</font></td>
-					</tr>
-					<tr>
-						<td><font color="#ff0000"><input name="windunit" type="radio" value="on" /> km/h (kilometers per hour)</font></td>
-						<td><font color="#ff0000"><input name="Kmph" size="5" type="text" /> km/h</font></td>
-					</tr>
-					<tr>
-						<td><font color="#ff0000"><input onclick="decideConvert(document.Convert.Windspeed.value)" type="button" value="Convert" /></font></td>
-						<td><font color="#ff0000"><input onclick="setToNull()" type="button" value="Clear Values" /></font></td>
-					</tr>
-				</tbody>
-			</table>
-            </form>
-
-			</td>
-		</tr>
-	</tbody>
-</table>
-
-<p>&nbsp;</p>
-</div>
-            </div>
-            <div style="clear:both"></div>
-            
-
-  <!-- End page content -->
-</div>
-
-  
-  
-<script>
+	
 // Get the Sidebar
 var mySidebar = document.getElementById("mySidebar");
 

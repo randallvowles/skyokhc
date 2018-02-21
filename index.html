@@ -183,20 +183,21 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
             <tr>
                <td width="50%">
                   <center>
-                     <input size="8" name="inputbox1" onChange="eval('c.value = ' + this.form.Cexpr.value)">
-					  °F
-					  <INPUT TYPE="hidden" NAME="Cexpr" VALUE="((Math.round((100/(212-32) * (inputbox1.value - 32))*100)))/100">
-						  <input Type="hidden" name="Fexpr" value="(Math.round(((212-32)/100 * c.value + 32)*100))/100"><br> 
-					 <INPUT name="c"  onChange="eval('inputbox1.value = ' + this.form.Fexpr.value)" size="8">
-					  °C</center>
+                     <font face="Arial">
+                     <input size="8" name="inputbox1" onChange="eval('c.value = ' + this.form.Cexpr.value)"></font><font size="2" face="Arial">°F</font><font face="Arial"><INPUT TYPE="hidden" NAME="Cexpr" VALUE="((Math.round((100/(212-32) * (inputbox1.value - 32))*100)))/100"><input Type="hidden" name="Fexpr" value="(Math.round(((212-32)/100 * c.value + 32)*100))/100"></font><font size="2" face="Arial"><br> 
+						</font><font face="Arial"> 
+						<INPUT name="c"  onChange="eval('inputbox1.value = ' + this.form.Fexpr.value)" size="8"></font><font size="2" face="Arial">°C</font></center>
                </td>
                
-<INPUT TYPE="hidden" NAME="Cexpr2" VALUE="((Math.round((100/(212-32) * (inputbox2.value - 32))*100)))/100">
-	<input Type="hidden" name="Fexpr2" value="(Math.round(((212-32)/100 * c2.value + 32)*100))/100">               
-                <td width="50%">
+<INPUT TYPE="hidden" NAME="Cexpr2" VALUE="((Math.round((100/(212-32) * (inputbox2.value - 32))*100)))/100"><input Type="hidden" name="Fexpr2" value="(Math.round(((212-32)/100 * c2.value + 32)*100))/100">               
+               
+               
+               <td width="50%">
                   <center>
-                    <input size="8" name="inputbox2" onChange="eval('c2.value = ' + this.form.Cexpr2.value)" onKeyDown="if(event.keyCode==13) event.keyCode=9;">°F<br>
-                      <INPUT name="c2"  onChange="eval('inputbox2.value = ' + this.form.Fexpr2.value)" onKeyDown="if(event.keyCode==13) event.keyCode=9;"size="8">°C</center>
+                     <font face="Arial">
+                     <input size="8" name="inputbox2" onChange="eval('c2.value = ' + this.form.Cexpr2.value)" onKeyDown="if(event.keyCode==13) event.keyCode=9;"></font><font size="2" face="Arial">°F<br>
+                      </font><font face="Arial">
+                      <INPUT name="c2"  onChange="eval('inputbox2.value = ' + this.form.Fexpr2.value)" onKeyDown="if(event.keyCode==13) event.keyCode=9;"size="8"></font><font size="2" face="Arial">°C</font></center>
                </td>
             </tr>
             <tr>

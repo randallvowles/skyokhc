@@ -147,6 +147,47 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     </table><br>
 </div>
 <hr>
+ <form>
+    <div align="center">
+    <center>
+      <table border="4" bgcolor="#80C0FF">
+        <tr>
+          <td colspan="4" align="CENTER" valign="MIDDLE"><h2>Surface - Cross / Head / Tail Wind Calculator</h2></td>
+        </tr>
+        <tr>
+          <td align="center" rowspan="2"><font size="4">Type in the following<br>
+            information</font></td>
+          <td align="center"><font size="4">Runway<br>
+            (i.e. 220)</font></td>
+          <td align="center"><font size="4">Wind Direction<br>
+            (i.e. 270)</font></td>
+          <td align="center"><font size="4">Wind Speed<br>
+            Knots</font></td>
+        </tr>
+        <tr>
+          <td align="center"><input type="text" size="3" name="runway"></td>
+          <td align="center"><input type="text" size="3" name="winddir"></td>
+          <td align="center"><input type="text" size="3" name="windspeed"></td>
+        </tr>
+        <tr>
+          <td align="center"><input name="button" type="button" onClick="computecw(this.form)" value="Calculate">
+              <input name="reset"
+      type="reset" value="   Reset   ">
+              <br>
+          </td>
+          <td align="center"><font size="4">The Crosswind is</font><br>
+              <input type="text" size="3" align="center" name="crosswind">
+              <font
+      size="4">Knots</font></td>
+          <td align="center" colspan="2"><font size="4">The Head(+) / Tail(-) wind is</font><br>
+              <input type="text" size="3" align="center" name="tailwind">
+              <font
+      size="4">Knots</font></td>
+        </tr>
+      </table>
+    </center>
+  </form>
+
 <div class="w3-row-padding">
   <div class="w3-half" align="center">
 <table border="3" cellpadding="4" cellspacing="0" width="525" height="382">
@@ -564,6 +605,32 @@ function myAccFunc2() {
         x.className = x.className.replace(" w3-show", "");
     }
 }
+	
+  function computecw(form) {
+    if (form.runway.value == "" || form.winddir.value == "" || form.windspeed.value == "") { 
+      alert("Enter Runway Direction, Win Direction and Wind Speed") 
+    } else {
+      var dirdiff = (form.winddir.value-form.runway.value)
+      if (dirdiff < 0) {
+        dirdiff = -dirdiff 
+      } else {}
+      var xwind = (form.windspeed.value * (Math.sin (0.0174 * dirdiff)))
+      if (xwind < 0) {
+      xwind = -xwind
+      } else {}
+      if (form.runway.value-form.winddir.value == 180) {
+        var twind = form.windspeed.value
+      } else {
+        if (form.winddir.value-form.runway.value == 180) {
+          var twind = -form.windspeed.value
+        } else {
+          var twind = (form.windspeed.value * (Math.cos (0.0174 * dirdiff)))
+        }
+      }
+    form.crosswind.value = (Math.round(xwind))
+    form.tailwind.value = (Math.round(twind))
+    }
+
 // Click on the "Duties" link on page load to open the accordion for demo purposes
 // document.getElementById("myBtn").click();  
   

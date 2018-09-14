@@ -79,20 +79,23 @@
         <div class="w3-container">
 
             <h5 id="ok1maps">OK1 Maps</h5>
-            $(document).ready(function(){
-            var folder = "images/ok1maps";
+            <script>
+                $(document).ready(function () {
+                            var folder = "images/ok1maps";
 
-            $.ajax({
-            url : folder,
-            success: function (data) {
-            $(data).find("a").attr("href", function (i, val) {
-            if( val.match(/\.(jpe?g|png|gif)$/) ) {
-            $("body").append( "<img src='"+ folder + val +"'>" ).append("<a>" + val + "</a>");
-            }
-            });
-            }
-            });
-
+                            $.ajax({
+                                url: folder,
+                                success: function (data) {
+                                    $(data).find("a").attr("href", function (i, val) {
+                                        if (val.match(/\.(jpe?g|png|gif)$/)) {
+                                            $("body").append("<img src='" + folder + val + "'>").append(
+                                                "<a>" + val + "</a>");
+                                        }
+                                    });
+                                }
+                            });
+                }
+            </script>
         </div>
         <hr>
 

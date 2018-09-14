@@ -77,6 +77,23 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
           <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>N PACIFIC</b></a>
           <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>AFRICA</b></a>
           <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>OCEANIA</b></a> -->
+          <a onclick="myAccFunc4()" href="javascript:void(0)" id="myBtn4" class="w3-bar-item w3-button w3-padding w3-hover-white"><i
+            class="fa fa-map-o fa-fw"></i>&nbsp; Regional Maps <i class="fa fa-caret-down"></i></a>
+        <div id="dropdown4" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="./maps/#unitedstates" class="w3-bar-item w3-button w3-hover-white"><b>UNITED STATES</b></a>
+          <a href="./maps/#europe" class="w3-bar-item w3-button w3-hover-white"><b>EUROPE</b></a>
+          <a href="./maps/#oceania" class="w3-bar-item w3-button w3-hover-white"><b>OCEANIA</b></a>
+          <a href="./maps/#seasia" class="w3-bar-item w3-button w3-hover-white"><b>SE ASIA</b></a>
+          <a href="./maps/#china" class="w3-bar-item w3-button w3-hover-white"><b>CHINA</b></a>
+          <a href="./maps/#korea" class="w3-bar-item w3-button w3-hover-white"><b>KOREA</b></a>
+          <a href="./maps/#npac" class="w3-bar-item w3-button w3-hover-white"><b>NPAC</b></a>
+          <!--           <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>SE ASIA</b></a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>INDIA</b></a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>MIDDLE EAST</b></a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>N PACIFIC</b></a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>AFRICA</b></a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>OCEANIA</b></a> -->
+        </div>
     </div>
     <br><br>
   </div>
@@ -777,6 +794,14 @@ function myAccFunc2() {
 }
   function myAccFunc3() {
     var x = document.getElementById("dropdown3");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+  function myAccFunc4() {
+    var x = document.getElementById("dropdown4");
     if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
     } else {

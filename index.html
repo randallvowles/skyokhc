@@ -646,7 +646,14 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
         x.className = x.className.replace(" w3-show", "");
       }
     }
-
+    function myAccFunc4() {
+      var x = document.getElementById("dropdown4");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
 
 
     // Click on the "Duties" link on page load to open the accordion for demo purposes

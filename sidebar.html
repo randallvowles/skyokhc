@@ -62,6 +62,15 @@
         <a onclick="myAccFunc4()" href="javascript:void(0)" id="myBtn4" class="w3-bar-item w3-button w3-padding w3-hover-white"><i
             class="fa fa-map-o fa-fw"></i>&nbsp; Regional Maps <i class="fa fa-caret-down"></i></a>
         <div id="dropdown4" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+            <a onclick="myAccFunc5()" href="javascript:void(0)" id="myBtn4" class="w3-bar-item w3-button w3-padding w3-hover-white"><i
+            class="fa fa-check fa-fw"></i>&nbsp; OK1 Maps <i class="fa fa-caret-down"></i></a>
+        <div id="dropdown5" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+            <a onclick="myAccFunc6()" href="javascript:void(0)" id="myBtn4" class="w3-bar-item w3-button w3-padding w3-hover-white"><i
+            class="fa fa-check fa-fw"></i>&nbsp; OK2 Maps <i class="fa fa-caret-down"></i></a>
+        <div id="dropdown6" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+            <a onclick="myAccFunc7()" href="javascript:void(0)" id="myBtn4" class="w3-bar-item w3-button w3-padding w3-hover-white"><i
+            class="fa fa-check fa-fw"></i>&nbsp; OK3 Maps <i class="fa fa-caret-down"></i></a>
+        <div id="dropdown7" class="w3-bar-block w3-hide w3-padding-large w3-medium">
           <a href="https://randallvowles.github.io/skyokhc/ok1maps.html" class="w3-bar-item w3-button w3-hover-white"><b>OK1 MAPS</b></a>
           <a href="https://randallvowles.github.io/skyokhc/ok2maps.html" class="w3-bar-item w3-button w3-hover-white"><b>OK2 MAPS</b></a>
           <a href="https://randallvowles.github.io/skyokhc/ok3maps.html" class="w3-bar-item w3-button w3-hover-white"><b>OK3 MAPS</b></a>
@@ -71,3 +80,90 @@
       </div>
     </font>
   </nav>
+  <script>
+  
+    // Get the Sidebar
+    var mySidebar = document.getElementById("mySidebar");
+
+    // Get the DIV with overlay effect
+    var overlayBg = document.getElementById("myOverlay");
+
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+      } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+      }
+    }
+
+    // Close the sidebar with the close button
+    function w3_close() {
+      mySidebar.style.display = "none";
+      overlayBg.style.display = "none";
+    }
+
+    // Accordion 
+    function myAccFunc() {
+      var x = document.getElementById("dropdown");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    function myAccFunc2() {
+      var x = document.getElementById("dropdown2");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    function myAccFunc3() {
+      var x = document.getElementById("dropdown3");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    function myAccFunc4() {
+      var x = document.getElementById("dropdown4");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+    function myAccFunc5() {
+      var x = document.getElementById("dropdown5");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }    function myAccFunc6() {
+      var x = document.getElementById("dropdown6");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }    function myAccFunc7() {
+      var x = document.getElementById("dropdown7");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    // Click on the "Duties" link on page load to open the accordion for demo purposes
+    // document.getElementById("myBtn").click();
+    </script>

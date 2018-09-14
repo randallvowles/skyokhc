@@ -520,69 +520,6 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
       document.Convert.Windspeed.value = "";
     }
 
-    // Get the Sidebar
-    var mySidebar = document.getElementById("mySidebar");
-
-    // Get the DIV with overlay effect
-    var overlayBg = document.getElementById("myOverlay");
-
-    // Toggle between showing and hiding the sidebar, and add overlay effect
-    function w3_open() {
-      if (mySidebar.style.display === 'block') {
-        mySidebar.style.display = 'none';
-        overlayBg.style.display = "none";
-      } else {
-        mySidebar.style.display = 'block';
-        overlayBg.style.display = "block";
-      }
-    }
-
-    // Close the sidebar with the close button
-    function w3_close() {
-      mySidebar.style.display = "none";
-      overlayBg.style.display = "none";
-    }
-
-    // Accordion 
-    function myAccFunc() {
-      var x = document.getElementById("dropdown");
-      if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-      } else {
-        x.className = x.className.replace(" w3-show", "");
-      }
-    }
-
-    function myAccFunc2() {
-      var x = document.getElementById("dropdown2");
-      if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-      } else {
-        x.className = x.className.replace(" w3-show", "");
-      }
-    }
-
-    function myAccFunc3() {
-      var x = document.getElementById("dropdown3");
-      if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-      } else {
-        x.className = x.className.replace(" w3-show", "");
-      }
-    }
-
-    function myAccFunc4() {
-      var x = document.getElementById("dropdown4");
-      if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-      } else {
-        x.className = x.className.replace(" w3-show", "");
-      }
-    }
-
-
-    // Click on the "Duties" link on page load to open the accordion for demo purposes
-    // document.getElementById("myBtn").click();
   </script>
 
 </body>

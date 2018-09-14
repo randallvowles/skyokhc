@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse wni-bg w3-animate-left w3-top" style="z-index:3;width:300px;padding-top:20px" id="mySidebar"><br>
+<font color="white">
+	<!--   <div class="w3-container w3-row"> -->
+<!--     <div class="w3-col s8 w3-bar w3-large">
+      <span><strong>Welcome, SKY OKHC!</strong></span>
+      <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-white" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>&nbsp; Close Menu</a>
+    </div> -->
+  <div class="w3-container">
+    <h2 class="w3-center"><b>SKY-OKHC Menu</b></h2>
+  </div>
+  <div class="w3-bar-block w3-large">
+    
+    <a href="#home" class="w3-bar-item w3-button w3-padding w3-hover-white"><i class="fa fa-home fa-fw"></i>&nbsp; Home</a>
+    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-bar-item w3-button w3-padding w3-hover-white" id="myBtn"><i class="fa fa-users fa-fw"></i>&nbsp; Duties <i class="fa fa-caret-down"></i>
+</a>
+        <div id="dropdown" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="https://randallvowles.github.io/skyokhc/ok1.html" class="w3-bar-item w3-button w3-hover-white"><b>OK1</b></a>
+          <a href="https://randallvowles.github.io/skyokhc/ok2.html" class="w3-bar-item w3-button w3-hover-white"><b>OK2</b></a>
+          <a href="https://randallvowles.github.io/skyokhc/ok3.html" class="w3-bar-item w3-button w3-hover-white"><b>OK3</b></a>
+          <a href="https://randallvowles.github.io/skyokhc/ok4.html" class="w3-bar-item w3-button w3-hover-white"><b>OK4</b></a>
+    </div>
+    <a onclick="myAccFunc2()" href="javascript:void(0)" class="w3-bar-item w3-button w3-padding w3-hover-white" id="myBtn2"><i class="fa fa-globe fa-fw"></i>&nbsp; Regions <i class="fa fa-caret-down"></i></a>
+        <div id="dropdown2" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="https://randallvowles.github.io/skyokhc/region.html#global" class="w3-bar-item w3-button w3-hover-white"><b>GLOBAL</b></a>
+          <a href="https://randallvowles.github.io/skyokhc/region.html#conus" class="w3-bar-item w3-button w3-hover-white"><b>CONUS</b></a>
+          <a href="https://randallvowles.github.io/skyokhc/region.html#samerica" class="w3-bar-item w3-button w3-hover-white"><b>SOUTH AMERICA</b></a>
+          <a href="https://randallvowles.github.io/skyokhc/region.html#europe" class="w3-bar-item w3-button w3-hover-white"><b>EUROPE</b></a>
+          <a href="https://randallvowles.github.io/skyokhc/region.html#china" class="w3-bar-item w3-button w3-hover-white"><b>CHINA</b></a>
+          <a href="https://randallvowles.github.io/skyokhc/region.html#korea" class="w3-bar-item w3-button w3-hover-white"><b>KOREA</b></a>
+          <a href="https://randallvowles.github.io/skyokhc/region.html#japan" class="w3-bar-item w3-button w3-hover-white"><b>JAPAN</b></a>
+          <a href="https://randallvowles.github.io/skyokhc/region.html#russia" class="w3-bar-item w3-button w3-hover-white"><b>RUSSIA</b></a>
+          <a href="https://randallvowles.github.io/skyokhc/region.html#seasia" class="w3-bar-item w3-button w3-hover-white"><b>SE ASIA</b></a>
+          <a href="https://randallvowles.github.io/skyokhc/region.html#india" class="w3-bar-item w3-button w3-hover-white"><b>INDIA</b></a>
+          <a href="https://randallvowles.github.io/skyokhc/region.html#middleeast" class="w3-bar-item w3-button w3-hover-white"><b>MIDDLE EAST</b></a>
+          <a href="https://randallvowles.github.io/skyokhc/region.html#npacific" class="w3-bar-item w3-button w3-hover-white"><b>N PACIFIC</b></a>
+          <a href="https://randallvowles.github.io/skyokhc/region.html#africa" class="w3-bar-item w3-button w3-hover-white"><b>AFRICA</b></a>
+          <a href="https://randallvowles.github.io/skyokhc/region.html#oceania" class="w3-bar-item w3-button w3-hover-white"><b>OCEANIA</b></a>
+          <a href="https://randallvowles.github.io/skyokhc/region.html#tropicalstorm" class="w3-bar-item w3-button w3-hover-white"><b>TROPICAL STORMS</b></a>
+    </div>
+    <a onclick="myAccFunc3()" href="javascript:void(0)" id="myBtn3" class="w3-bar-item w3-button w3-padding w3-hover-white"><i class="fa fa-bolt fa-fw"></i>&nbsp; Parameters <i class="fa fa-caret-down"></i></a>
+    <div id="dropdown3" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="./parameters" class="w3-bar-item w3-button w3-hover-white"><b>PARAMETERS HOME</b></a>
+          <a href="./parameters/#radar" class="w3-bar-item w3-button w3-hover-white"><b>RADAR</b></a>
+          <a href="./parameters/#satellite" class="w3-bar-item w3-button w3-hover-white"><b>SATELLITE</b></a>
+          <a href="./parameters/#lightning" class="w3-bar-item w3-button w3-hover-white"><b>LIGHTNING</b></a>
+          <a href="./parameters/#surface_obs" class="w3-bar-item w3-button w3-hover-white"><b>SURFACE OBSERVATIONS</b></a>
+          <a href="./parameters/#analysis" class="w3-bar-item w3-button w3-hover-white"><b>SURFACE ANALYSIS</b></a>
+          <a href="./parameters/#nwp" class="w3-bar-item w3-button w3-hover-white"><b>NWP MODELS</b></a>
+<!--           <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>SE ASIA</b></a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>INDIA</b></a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>MIDDLE EAST</b></a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>N PACIFIC</b></a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>AFRICA</b></a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>OCEANIA</b></a> -->
+    </div>
+    <br><br>
+  </div>
+	</font>
+</nav>
+
+

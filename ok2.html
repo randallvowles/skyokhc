@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <title>SKY OKHC OK2 Page</title>
@@ -9,322 +7,430 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-  .wni-blue,.wni-hover-blue:hover{color:#0c419a;background-color:#0c419a}
-  .wni-bg {background-color: #0c419a;}
+  .wni-blue,
+  .wni-hover-blue:hover {
+    color: #0c419a;
+    background-color: #0c419a
+  }
+
+  .wni-bg {
+    background-color: #0c419a;
+  }
+
   /* .w3-striped tbody tr:nth-child(even){background-color:#0c419a} */
-  .w3-hoverable tbody tr:hover,.w3-ul.w3-hoverable li:hover{background-color:#6d8dc2}.w3-centered tr th,.w3-centered tr td{text-align:center}
-html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+  .w3-hoverable tbody tr:hover,
+  .w3-ul.w3-hoverable li:hover {
+    background-color: #6d8dc2
+  }
+
+  .w3-centered tr th,
+  .w3-centered tr td {
+    text-align: center
+  }
+
+  html,
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: "Raleway", sans-serif
+  }
 </style>
+
 <body class="w3-white">
 
-<!-- Top container -->
-<!-- <div class="w3-bar w3-top wni-bg w3-large" style="z-index:4">
+  <!-- Top container -->
+  <!-- <div class="w3-bar w3-top wni-bg w3-large" style="z-index:4">
   <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i> &nbsp;Menu</button>
   <span class="w3-bar-item w3-right">Logo</span>
 </div> -->
 
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse wni-bg w3-animate-left w3-top" style="z-index:3;width:300px;padding-top:20px" id="mySidebar"><br>
-<font color="white">
-  <!--   <div class="w3-container w3-row"> -->
-<!--     <div class="w3-col s8 w3-bar w3-large">
+  <!-- Sidebar/menu -->
+  <nav class="w3-sidebar w3-collapse wni-bg w3-animate-left w3-top" style="z-index:3;width:300px;padding-top:20px" id="mySidebar"><br>
+    <font color="white">
+      <!--   <div class="w3-container w3-row"> -->
+      <!--     <div class="w3-col s8 w3-bar w3-large">
       <span><strong>Welcome, SKY OKHC!</strong></span>
       <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-white" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>&nbsp; Close Menu</a>
     </div> -->
-  <div class="w3-container">
-    <h2 class="w3-center"><b>SKY-OKHC Menu</b></h2>
-  </div>
-  <div class="w3-bar-block w3-large">
-    
-    <a href="https://randallvowles.github.io/skyokhc" class="w3-bar-item w3-button w3-padding w3-hover-white"><i class="fa fa-home fa-fw"></i>&nbsp; Home</a>
-    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-bar-item w3-button w3-padding w3-hover-white" id="myBtn"><i class="fa fa-users fa-fw"></i>&nbsp; Duties <i class="fa fa-caret-down"></i>
-</a>
+      <div class="w3-container">
+        <h2 class="w3-center"><b>SKY-OKHC Menu</b></h2>
+      </div>
+      <div class="w3-bar-block w3-large">
+
+        <a href="https://randallvowles.github.io/skyokhc" class="w3-bar-item w3-button w3-padding w3-hover-white"><i
+            class="fa fa-home fa-fw"></i>&nbsp; Home</a>
+        <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-bar-item w3-button w3-padding w3-hover-white" id="myBtn"><i
+            class="fa fa-users fa-fw"></i>&nbsp; Duties <i class="fa fa-caret-down"></i>
+        </a>
         <div id="dropdown" class="w3-bar-block w3-hide w3-padding-large w3-medium">
           <a href="https://randallvowles.github.io/skyokhc/ok1.html" class="w3-bar-item w3-button w3-hover-white"><b>OK1</b></a>
           <a href="https://randallvowles.github.io/skyokhc/ok2.html" class="w3-bar-item w3-button w3-hover-white"><b>OK2</b></a>
           <a href="https://randallvowles.github.io/skyokhc/ok3.html" class="w3-bar-item w3-button w3-hover-white"><b>OK3</b></a>
           <a href="https://randallvowles.github.io/skyokhc/ok4.html" class="w3-bar-item w3-button w3-hover-white"><b>OK4</b></a>
-    </div>
-    <a onclick="myAccFunc2()" href="javascript:void(0)" class="w3-bar-item w3-button w3-padding w3-hover-white" id="myBtn2"><i class="fa fa-globe fa-fw"></i>&nbsp; Regions <i class="fa fa-caret-down"></i></a>
+        </div>
+        <a onclick="myAccFunc2()" href="javascript:void(0)" class="w3-bar-item w3-button w3-padding w3-hover-white" id="myBtn2"><i
+            class="fa fa-globe fa-fw"></i>&nbsp; Regions <i class="fa fa-caret-down"></i></a>
         <div id="dropdown2" class="w3-bar-block w3-hide w3-padding-large w3-medium">
           <a href="https://randallvowles.github.io/skyokhc/region.html#global" class="w3-bar-item w3-button w3-hover-white"><b>GLOBAL</b></a>
           <a href="https://randallvowles.github.io/skyokhc/region.html#conus" class="w3-bar-item w3-button w3-hover-white"><b>CONUS</b></a>
-          <a href="https://randallvowles.github.io/skyokhc/region.html#samerica" class="w3-bar-item w3-button w3-hover-white"><b>SOUTH AMERICA</b></a>
+          <a href="https://randallvowles.github.io/skyokhc/region.html#samerica" class="w3-bar-item w3-button w3-hover-white"><b>SOUTH
+              AMERICA</b></a>
           <a href="https://randallvowles.github.io/skyokhc/region.html#europe" class="w3-bar-item w3-button w3-hover-white"><b>EUROPE</b></a>
           <a href="https://randallvowles.github.io/skyokhc/region.html#china" class="w3-bar-item w3-button w3-hover-white"><b>CHINA</b></a>
           <a href="https://randallvowles.github.io/skyokhc/region.html#korea" class="w3-bar-item w3-button w3-hover-white"><b>KOREA</b></a>
           <a href="https://randallvowles.github.io/skyokhc/region.html#japan" class="w3-bar-item w3-button w3-hover-white"><b>JAPAN</b></a>
           <a href="https://randallvowles.github.io/skyokhc/region.html#russia" class="w3-bar-item w3-button w3-hover-white"><b>RUSSIA</b></a>
-          <a href="https://randallvowles.github.io/skyokhc/region.html#seasia" class="w3-bar-item w3-button w3-hover-white"><b>SE ASIA</b></a>
+          <a href="https://randallvowles.github.io/skyokhc/region.html#seasia" class="w3-bar-item w3-button w3-hover-white"><b>SE
+              ASIA</b></a>
           <a href="https://randallvowles.github.io/skyokhc/region.html#india" class="w3-bar-item w3-button w3-hover-white"><b>INDIA</b></a>
-          <a href="https://randallvowles.github.io/skyokhc/region.html#middleeast" class="w3-bar-item w3-button w3-hover-white"><b>MIDDLE EAST</b></a>
-          <a href="https://randallvowles.github.io/skyokhc/region.html#npacific" class="w3-bar-item w3-button w3-hover-white"><b>N PACIFIC</b></a>
+          <a href="https://randallvowles.github.io/skyokhc/region.html#middleeast" class="w3-bar-item w3-button w3-hover-white"><b>MIDDLE
+              EAST</b></a>
+          <a href="https://randallvowles.github.io/skyokhc/region.html#npacific" class="w3-bar-item w3-button w3-hover-white"><b>N
+              PACIFIC</b></a>
           <a href="https://randallvowles.github.io/skyokhc/region.html#africa" class="w3-bar-item w3-button w3-hover-white"><b>AFRICA</b></a>
           <a href="https://randallvowles.github.io/skyokhc/region.html#oceania" class="w3-bar-item w3-button w3-hover-white"><b>OCEANIA</b></a>
-          <a href="https://randallvowles.github.io/skyokhc/region.html#tropicalstorm" class="w3-bar-item w3-button w3-hover-white"><b>TROPICAL STORMS</b></a>
+          <a href="https://randallvowles.github.io/skyokhc/region.html#tropicalstorm" class="w3-bar-item w3-button w3-hover-white"><b>TROPICAL
+              STORMS</b></a>
+        </div>
+        <a onclick="myAccFunc3()" href="javascript:void(0)" id="myBtn3" class="w3-bar-item w3-button w3-padding w3-hover-white"><i
+            class="fa fa-bolt fa-fw"></i>&nbsp; Parameters <i class="fa fa-caret-down"></i></a>
+        <div id="dropdown3" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="https://randallvowles.github.io/skyokhc/parameters.html" class="w3-bar-item w3-button w3-hover-white"><b>PARAMETERS
+              HOME</b></a>
+          <a href="https://randallvowles.github.io/skyokhc/parameters.html#radar" class="w3-bar-item w3-button w3-hover-white"><b>RADAR</b></a>
+          <a href="https://randallvowles.github.io/skyokhc/parameters.html#satellite" class="w3-bar-item w3-button w3-hover-white"><b>SATELLITE</b></a>
+          <a href="https://randallvowles.github.io/skyokhc/parameters.html#lightning" class="w3-bar-item w3-button w3-hover-white"><b>LIGHTNING</b></a>
+          <a href="https://randallvowles.github.io/skyokhc/parameters.html#surface_obs" class="w3-bar-item w3-button w3-hover-white"><b>SURFACE
+              OBSERVATIONS</b></a>
+          <a href="https://randallvowles.github.io/skyokhc/parameters.html#analysis" class="w3-bar-item w3-button w3-hover-white"><b>SURFACE
+              ANALYSIS</b></a>
+          <a href="https://randallvowles.github.io/skyokhc/parameters.html#nwp" class="w3-bar-item w3-button w3-hover-white"><b>NWP
+              MODELS</b></a>
+          <!--           <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>SE ASIA</b></a>
+    <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>INDIA</b></a>
+    <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>MIDDLE EAST</b></a>
+    <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>N PACIFIC</b></a>
+    <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>AFRICA</b></a>
+    <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>OCEANIA</b></a> -->
+          <a onclick="myAccFunc4()" href="javascript:void(0)" id="myBtn4" class="w3-bar-item w3-button w3-padding w3-hover-white"><i
+              class="fa fa-map-o fa-fw"></i>&nbsp; Regional Maps <i class="fa fa-caret-down"></i></a>
+          <div id="dropdown4" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+            <a href="https://randallvowles.github.io/skyokhc/maps.html#unitedstates" class="w3-bar-item w3-button w3-hover-white"><b>UNITED
+                STATES</b></a>
+            <a href="https://randallvowles.github.io/skyokhc/maps.html#europe" class="w3-bar-item w3-button w3-hover-white"><b>EUROPE</b></a>
+            <a href="https://randallvowles.github.io/skyokhc/maps.html#oceania" class="w3-bar-item w3-button w3-hover-white"><b>OCEANIA</b></a>
+            <a href="https://randallvowles.github.io/skyokhc/maps.html#seasia" class="w3-bar-item w3-button w3-hover-white"><b>SE
+                ASIA</b></a>
+            <a href="https://randallvowles.github.io/skyokhc/maps.html#china" class="w3-bar-item w3-button w3-hover-white"><b>CHINA</b></a>
+            <a href="https://randallvowles.github.io/skyokhc/maps.html#korea" class="w3-bar-item w3-button w3-hover-white"><b>KOREA</b></a>
+            <a href="https://randallvowles.github.io/skyokhc/maps.html#npac" class="w3-bar-item w3-button w3-hover-white"><b>NPAC</b></a>
+            <!--           <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>SE ASIA</b></a>
+    <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>INDIA</b></a>
+    <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>MIDDLE EAST</b></a>
+    <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>N PACIFIC</b></a>
+    <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>AFRICA</b></a>
+    <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>OCEANIA</b></a> -->
+          </div>
+          <br><br>
+        </div>
+    </font>
+  </nav>
+
+
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+    id="myOverlay"></div>
+
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main" style="margin-left:300px;margin-top:20px;">
+
+    <!-- Header -->
+    <header class="w3-container" style="padding-top:22px">
+      <h3 id="region_home"><b><i class="fa fa-home"></i> OK2 Home Page</b></h3>
+    </header>
+
+    <hr>
+
+    <div class="w3-container">
+
+      < <h5 id="global">Global Forecasting Sites</h5>
+        <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
+          <tr>
+            <td><a href="https://www.windy.com/">Windy</a></td>
+            <td>Mainly surface observations, some upper-level (wind, temp, clouds, satellite). METARs and TAFs,
+              extended
+              localized forecasts as well.</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.tropicaltidbits.com/analysis/models/">Tropical Tidbits</a></td>
+            <td>GFS, ECMWF Model maps, GEFS, GEPS ensemble maps</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.wunderground.com/wundermap">WeatherUnderground WunderMap</a></td>
+            <td>Surface observations, RADAR, satellite, fronts, some model data. Severe weather (fires,
+              hurricanes/typhoons, lightning).</td>
+          </tr>
+          <tr>
+            <td><a href="http://satrecv1.wni.co.jp/sat/monitor/index.html">WNI Satellite Imagery Compilation</a></td>
+            <td>Compiliation of all satellite images (including different bands)</td>
+          </tr>
+          <tr>
+            <td><a href="http://en.blitzortung.org/live_lightning_maps.php">Blitzortung Lightning Map</a></td>
+            <td>Real-time global lightning map</td>
+          </tr>
+          <tr>
+            <td><a href="http://www.goes.noaa.gov/">NOAA GOES server</a></td>
+            <td>GOES-W, Himawari-8, Indian Ocean, Meteosat</td>
+          </tr>
+          <tr>
+            <td><a href="http://meteocentre.com/">MeteoCentre UQAM</a></td>
+            <td>(North America, Europe) RADAR, satellite, lightning, radiosondes, surface analysis</td>
+          </tr>
+          <tr>
+            <td><a href="https://earth.nullschool.net/">Earth (nullschool.net)</a></td>
+            <td>Global map of temp, wind, pressure, precip</td>
+          </tr>
+          <tr>
+            <td><a href="http://www.pivotalweather.com/model.php">Pivotal Weather</a></td>
+            <td>Global models (GFS, NAM, ECMWF, RAP, HRRR, etc) and ensembles </td>
+          </tr>
+          <tr>
+            <td><a href="https://ready.arl.noaa.gov/READYcmet.php">NOAA Air Resources Laboratory</a></td>
+            <td>Location forecasts, soundings, meteograms, windrose, etc</td>
+          </tr>
+          </tr>
+          <tr>
+            <td><a href="http://imaging1.wni.co.jp/own_snd/cgi/llws2.cgi">OWN Vertical Profile</a></td>
+            <td>Vertical profile (text) for any airport</td>
+          </tr>
+          </tr>
+          <tr>
+            <td><a href="http://imaging1.wni.co.jp/sky_af/skygfs_viewer.cgi">SKY-GFS Viewer</a></td>
+            <td>Text list of GFS model data for any airport</td>
+          </tr>
+          </tr>
+          <tr>
+            <td><a href="http://imaging1.wni.co.jp/own_snd/cgi/view_own_point3.cgi">OWN Point Data Viewer</a></td>
+            <td>OWN model data for NPAC, N India, Jakarta, CONUS, AU, Europe, W Asia, E Asia, Japan</td>
+          </tr>
+          </tr>
+          <tr>
+            <td><a href="http://imaging3.wni.co.jp/own_snd/cgi/view_own_point3.cgi">OWN Point Data Viewer</a></td>
+            <td>OWN model data for Argentina, MiddleEast, Brazil, SE China, SE Asia</td>
+          </tr>
+          </tr>
+          <tr>
+            <td><a href="http://imaging3.wni.co.jp/vis/cgi/view_own_multi.cgi">OWN Model Map Viewer</a></td>
+            <td>OWN model for all regions (except NPAC)</td>
+          </tr>
+          <tr>
+            <td><a href="http://imaging1.wni.co.jp/jma_point/cgi/sounding.cgi">OWN/MSM/GSM Model Soundings</a></td>
+            <td>Model soundings for any airport</td>
+          </tr>
+          <tr>
+            <td><a href="http://weather.uwyo.edu/upperair/sounding.html">University of Wyoming Sounding</a></td>
+            <td>Global upper air soundings (all participating airports or other sites)</td>
+          </tr>
+          <tr>
+            <td><a href="https://sfericmaps.enterprise.earthnetworks.com/maps">Earth Networks</a></td>
+            <td>Surface observations, lightning (username: "akira@wni.com", password: "WNIdayo188")</td>
+          </tr>
+          <tr>
+            <td><a href="https://en.sat24.com/en/">SAT24</a></td>
+            <td>Collection of all satellite imagery, global zoomed in views</td>
+          </tr>
+          <tr>
+            <td><a href="http://sharaku.eorc.jaxa.jp/GSMaP/index.htm">Japanese Aerospace Exploration Agency (JAXA)</a></td>
+            <td>Global RADAR composition</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.fnmoc.navy.mil/wxmap_cgi/index.html">FNMOC (US Navy)</a></td>
+            <td>Global Models (NVG, GFS, Military, Ensembles)</td>
+          </tr>
+          <tr>
+            <td><a href="http://nextgen.weathernews.com/foster/login.cgi">FOSTER NEXTGEN</a></td>
+            <td>WNI global tool for satellite, RADAR, NWP, METARs/TAFs</td>
+          </tr>
+          <tr>
+            <td><a href="http://www.wetterzentrale.de/en/default.php">Wetterzentrale</a></td>
+            <td>German Weather Bureau site for viewing MOS meteograms</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.meteoblue.com"></a>Meteoblue</td>
+            <td>Weather forecasts, ensemble models, meteograms, webcams</td>
+          </tr>
+          <tr>
+            <!-- <td><a href=""></a></td>
+<td></td>
+</tr><tr>
+<td><a href=""></a></td>
+<td></td>
+</tr> -->
+        </table><br>
+
+        <h5 id="china">China Forecasting Sites</h5>
+        <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
+          <tr>
+            <td><a href="http://imaging3.wni.co.jp/own/cross_section/cross_section.html">OWN Cross Section Charts</a></td>
+            <td>OWN model cross sections for China</td>
+          </tr>
+          <tr>
+            <td><a href="http://nmsc.kma.go.kr/html/homepage/en/satellite/searchSatelliteImageN.do?data_type=1001">Korean
+                National Meteorological Satellite Center</a></td>
+            <td>Satellite images for East Asia</td>
+          </tr>
+          <tr>
+            <td><a href="http://rammb.cira.colostate.edu/ramsdis/online/himawari-8.asp">Regional and Mesoscale
+                Meteorology Branch (NOAA)</a></td>
+            <td>Himawari-8 satellite imagery</td>
+          </tr>
+          <tr>
+            <td><a href="http://eng.nmc.cn/">Chinese Meteorological Center (English)</a></td>
+            <td>RADAR, satellite, surface observations, forecasts, surface analysis</td>
+          </tr>
+          <tr>
+            <td><a href="http://en.weather.com.cn/radar/">Weather China (English)</a></td>
+            <td>RADAR, satellite, surface observations</td>
+          </tr>
+          <tr>
+            <td><a href="http://avt7.xiamenair.com.cn/">Dumbo Aeronautical Met Info Services (Chinese)</a></td>
+            <td>Surface observations, air pollution, RADAR, surface analysis</td>
+          </tr>
+          <tr>
+            <td><a href="http://qdatm.cn/">QingDao ATM</a></td>
+            <td>Surface observations, RADAR, satellite (site username: "sh", password: "sc5108")</td>
+          </tr>
+          <tr>
+            <td><a href="http://aqicn.org/city/beijing/">Beijing Air Pollution</a></td>
+            <td>Air quality information and forecasts</td>
+          </tr>
+          <tr>
+            <td><a href="http://www.smg.gov.mo/smg/latestWeather/e_radar.htm">Macau Weather Service</a></td>
+            <td>RADAR, satellite, surface observations, lightning, forecasts, weather cameras</td>
+          </tr>
+          <tr>
+            <td><a href="http://www.cwb.gov.tw/V7e/observe/radar/">Taiwan Weather</a></td>
+            <td>RADAR, satellite, lightning, surface observations</td>
+          </tr>
+          <tr>
+            <td><a href="http://www.hko.gov.hk/contente.htm">Hong Kong Observatory</a></td>
+            <td>Surface observations, weather charts, forecasts</td>
+          </tr>
+          <!-- <tr>
+<td><a href=""></a></td>
+<td></td>
+</tr>
+  <tr>
+<td><a href=""></a></td>
+<td></td>
+</tr>
+  <tr>
+<td><a href=""></a></td>
+<td></td>
+</tr>
+  <tr>
+<td><a href=""></a></td>
+<td></td>
+</tr> -->
+        </table><br>
+        <h5 id="korea">Korea Forecasting Sites</h5>
+        <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
+          <tr>
+            <td><a href="http://imaging1.wni.co.jp/jma_model/cross_section/">OWN Cross Section Charts</a></td>
+            <td>OWN model cross sectional charts for Japan and Korea</td>
+          </tr>
+          <tr>
+            <td><a href="http://web.kma.go.kr/eng/index.jsp">Korean Meteorological Administration (English)</a></td>
+            <td>RADAR, satellite, lightning, surface observations, forecast, surface analysis</td>
+          </tr>
+          <tr>
+            <td><a href="http://nmsc.kma.go.kr/html/homepage/en/satellite/searchSatelliteImageN.do?data_type=1001">Korean
+                National Meteorological Satellite Center</a></td>
+            <td>Satellite images for East Asia</td>
+          </tr>
+          <!-- <tr>
+<td><a href=""></a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href=""></a></td>
+<td></td>
+</tr> -->
+        </table><br>
+
     </div>
-    <a onclick="myAccFunc3()" href="javascript:void(0)" id="myBtn3" class="w3-bar-item w3-button w3-padding w3-hover-white"><i class="fa fa-bolt fa-fw"></i>&nbsp; Parameters <i class="fa fa-caret-down"></i></a>
-    <div id="dropdown3" class="w3-bar-block w3-hide w3-padding-large w3-medium">
-          <a href="./parameters" class="w3-bar-item w3-button w3-hover-white"><b>PARAMETERS HOME</b></a>
-          <a href="./parameters/#radar" class="w3-bar-item w3-button w3-hover-white"><b>RADAR</b></a>
-          <a href="./parameters/#satellite" class="w3-bar-item w3-button w3-hover-white"><b>SATELLITE</b></a>
-          <a href="./parameters/#lightning" class="w3-bar-item w3-button w3-hover-white"><b>LIGHTNING</b></a>
-          <a href="./parameters/#surface_obs" class="w3-bar-item w3-button w3-hover-white"><b>SURFACE OBSERVATIONS</b></a>
-          <a href="./parameters/#analysis" class="w3-bar-item w3-button w3-hover-white"><b>SURFACE ANALYSIS</b></a>
-          <a href="./parameters/#nwp" class="w3-bar-item w3-button w3-hover-white"><b>NWP MODELS</b></a>
-<!--           <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>SE ASIA</b></a>
-          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>INDIA</b></a>
-          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>MIDDLE EAST</b></a>
-          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>N PACIFIC</b></a>
-          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>AFRICA</b></a>
-          <a href="#" class="w3-bar-item w3-button w3-hover-white"><b>OCEANIA</b></a> -->
-    </div>
-    <br><br>
+    <hr>
+
+    <!-- End page content -->
   </div>
-  </font>
-</nav>
 
+  <script>
+    // Get the Sidebar
+    var mySidebar = document.getElementById("mySidebar");
 
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    // Get the DIV with overlay effect
+    var overlayBg = document.getElementById("myOverlay");
 
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:300px;margin-top:20px;">
-
-  <!-- Header -->
-  <header class="w3-container" style="padding-top:22px">
-    <h3 id="region_home"><b><i class="fa fa-home"></i> OK2 Home Page</b></h3>
-  </header>
-
-  <hr>
-
-  <div class="w3-container">
-    
-<h5 id="global">Global Forecasting Sites</h5>
-<table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
-  <tr>
-    <td><a href="https://www.windy.com/">Windy</a></td>
-    <td>Mainly surface observations, some upper-level (wind, temp, clouds, satellite). METARs and TAFs, extended localized forecasts as well.</td>
-  </tr>
-  <tr>
-    <td><a href="https://www.tropicaltidbits.com/analysis/models/">Tropical Tidbits</a></td>
-    <td>GFS, ECMWF Model maps, GEFS, GEPS ensemble maps</td>
-  </tr>
-  <tr>
-    <td><a href="https://www.wunderground.com/wundermap">WeatherUnderground WunderMap</a></td>
-    <td>Surface observations, RADAR, satellite, fronts, some model data. Severe weather (fires, hurricanes/typhoons, lightning).</td>
-  </tr>
-  <tr>
-    <td><a href="http://satrecv1.wni.co.jp/sat/monitor/index.html">WNI Satellite Imagery Compilation</a></td>
-    <td>Compiliation of all satellite images (including different bands)</td>
-  </tr>
-  <tr>
-    <td><a href="http://en.blitzortung.org/live_lightning_maps.php">Blitzortung Lightning Map</a></td>
-    <td>Real-time global lightning map</td>
-  </tr>
-  <tr>
-    <td><a href="http://www.goes.noaa.gov/">NOAA GOES server</a></td>
-    <td>GOES-W, Himawari-8, Indian Ocean, Meteosat</td>
-  </tr>
-    <tr>
-    <td><a href="http://meteocentre.com/">MeteoCentre UQAM</a></td>
-    <td>(North America, Europe) RADAR, satellite, lightning, radiosondes, surface analysis</td>
-  </tr>
-  <tr>
-    <td><a href="https://earth.nullschool.net/">Earth (nullschool.net)</a></td>
-    <td>Global map of temp, wind, pressure, precip</td>
-  </tr>
-    <tr>
-    <td><a href="http://www.pivotalweather.com/model.php">Pivotal Weather</a></td>
-    <td>Global models (GFS, NAM, ECMWF, RAP, HRRR, etc) and ensembles </td>
-  </tr>
-    <tr>
-    <td><a href="https://ready.arl.noaa.gov/READYcmet.php">NOAA Air Resources Laboratory</a></td>
-    <td>Location forecasts, soundings, meteograms, windrose, etc</td>
-  </tr>
-    </tr>
-    <tr>
-    <td><a href="http://imaging1.wni.co.jp/own_snd/cgi/llws2.cgi">OWN Vertical Profile</a></td>
-    <td>Vertical profile (text) for any airport</td>
-  </tr>
-      </tr>
-    <tr>
-    <td><a href="http://imaging1.wni.co.jp/sky_af/skygfs_viewer.cgi">SKY-GFS Viewer</a></td>
-    <td>Text list of GFS model data for any airport</td>
-  </tr>
-    </tr>
-    <tr>
-    <td><a href="http://imaging1.wni.co.jp/own_snd/cgi/view_own_point3.cgi">OWN Point Data Viewer</a></td>
-    <td>OWN model data for NPAC, N India, Jakarta, CONUS, AU, Europe, W Asia, E Asia, Japan</td>
-  </tr>
-    </tr>
-    <tr>
-    <td><a href="http://imaging3.wni.co.jp/own_snd/cgi/view_own_point3.cgi">OWN Point Data Viewer</a></td>
-    <td>OWN model data for Argentina, MiddleEast, Brazil, SE China, SE Asia</td>
-  </tr>
-    </tr>
-    <tr>
-    <td><a href="http://imaging3.wni.co.jp/vis/cgi/view_own_multi.cgi">OWN Model Map Viewer</a></td>
-    <td>OWN model for all regions (except NPAC)</td>
-  </tr>
-      <tr>
-    <td><a href="http://imaging1.wni.co.jp/jma_point/cgi/sounding.cgi">OWN/MSM/GSM Model Soundings</a></td>
-    <td>Model soundings for any airport</td>
-  </tr>
-      <tr>
-    <td><a href="http://weather.uwyo.edu/upperair/sounding.html">University of Wyoming Sounding</a></td>
-    <td>Global upper air soundings (all participating airports or other sites)</td>
-  </tr>
-      <tr>
-    <td><a href="https://sfericmaps.enterprise.earthnetworks.com/maps">Earth Networks</a></td>
-    <td>Surface observations, lightning (username: "akira@wni.com", password: "WNIdayo188")</td>
-  </tr>
-      <tr>
-    <td><a href="https://en.sat24.com/en/">SAT24</a></td>
-    <td>Collection of all satellite imagery, global zoomed in views</td>
-  </tr>
-      <tr>
-    <td><a href="http://sharaku.eorc.jaxa.jp/GSMaP/index.htm">Japanese Aerospace Exploration Agency (JAXA)</a></td>
-    <td>Global RADAR composition</td>
-  </tr>
-  <tr>
-    <td><a href=""></a></td>
-    <td></td>
-  </tr>
-
-</table><br>
-      
-  <h5 id="china">China Forecasting Sites</h5>
-  <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
-    <tr>
-      <td><a href="http://imaging3.wni.co.jp/own/cross_section/cross_section.html">OWN Cross Section Charts</a></td>
-      <td>OWN model cross sections for China</td>
-    </tr>
-     <tr>
-      <td><a href="http://nmsc.kma.go.kr/html/homepage/en/satellite/searchSatelliteImageN.do?data_type=1001">Korean National Meteorological Satellite Center</a></td>
-      <td>Satellite images for East Asia</td>
-    </tr>
-        <tr>
-      <td><a href="http://rammb.cira.colostate.edu/ramsdis/online/himawari-8.asp">Regional and Mesoscale Meteorology Branch (NOAA)</a></td>
-      <td>Himawari-8 satellite imagery</td>
-    </tr>
-    <tr>
-      <td><a href="http://eng.nmc.cn/">Chinese Meteorological Center (English)</a></td>
-      <td>RADAR, satellite, surface observations, forecasts, surface analysis</td>
-    </tr>
-    <tr>
-      <td><a href="http://en.weather.com.cn/radar/">Weather China (English)</a></td>
-      <td>RADAR, satellite, surface observations</td>
-    </tr>
-    <tr>
-      <td><a href="http://avt7.xiamenair.com.cn/">Dumbo Aeronautical Met Info Services (Chinese)</a></td>
-      <td>Surface observations, air pollution, RADAR, surface analysis</td>
-    </tr>
-    <tr>
-      <td><a href="http://qdatm.cn/">QingDao ATM</a></td>
-      <td>Surface observations, RADAR, satellite (site username: "sh", password: "sc5108")</td>
-    </tr>
-        <tr>
-      <td><a href="http://aqicn.org/city/beijing/">Beijing Air Pollution</a></td>
-      <td>Air quality information and forecasts</td>
-    </tr>
-        <tr>
-      <td><a href="http://www.smg.gov.mo/smg/latestWeather/e_radar.htm">Macau Weather Service</a></td>
-      <td>RADAR, satellite, surface observations, lightning, forecasts, weather cameras</td>
-    </tr>
-        <tr>
-      <td><a href="http://www.cwb.gov.tw/V7e/observe/radar/">Taiwan Weather</a></td>
-      <td>RADAR, satellite, lightning, surface observations</td>
-    </tr>
-        <tr>
-      <td><a href="http://www.hko.gov.hk/contente.htm">Hong Kong Observatory</a></td>
-      <td>Surface observations, weather charts, forecasts</td>
-    </tr>
-        <tr>
-      <td><a href=""></a></td>
-      <td></td>
-
-  </table><br>
-  <h5 id="korea">Korea Forecasting Sites</h5>
-  <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
-    <tr>
-      <td><a href="http://imaging1.wni.co.jp/jma_model/cross_section/">OWN Cross Section Charts</a></td>
-      <td>OWN model cross sectional charts for Japan and Korea</td>
-    </tr>
-    <tr>
-      <td><a href="http://web.kma.go.kr/eng/index.jsp">Korean Meteorological Administration (English)</a></td>
-      <td>RADAR, satellite, lightning, surface observations, forecast, surface analysis</td>
-    </tr>
-    <tr>
-      <td><a href="http://nmsc.kma.go.kr/html/homepage/en/satellite/searchSatelliteImageN.do?data_type=1001">Korean National Meteorological Satellite Center</a></td>
-      <td>Satellite images for East Asia</td>
-    </tr>
-    <tr>
-      <td><a href=""></a></td>
-      <td></td>
-    </tr>
-
-  </table><br>
-
-</div>
-<hr>
-
-  <!-- End page content -->
-</div>
-
-<script>
-// Get the Sidebar
-var mySidebar = document.getElementById("mySidebar");
-
-// Get the DIV with overlay effect
-var overlayBg = document.getElementById("myOverlay");
-
-// Toggle between showing and hiding the sidebar, and add overlay effect
-function w3_open() {
-    if (mySidebar.style.display === 'block') {
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
         mySidebar.style.display = 'none';
         overlayBg.style.display = "none";
-    } else {
+      } else {
         mySidebar.style.display = 'block';
         overlayBg.style.display = "block";
+      }
     }
-}
 
-// Close the sidebar with the close button
-function w3_close() {
-    mySidebar.style.display = "none";
-    overlayBg.style.display = "none";
-}
-  
-// Accordion 
-function myAccFunc() {
-    var x = document.getElementById("dropdown");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
+    // Close the sidebar with the close button
+    function w3_close() {
+      mySidebar.style.display = "none";
+      overlayBg.style.display = "none";
     }
-}
-function myAccFunc2() {
-    var x = document.getElementById("dropdown2");
-    if (x.className.indexOf("w3-show") == -1) {
+
+    // Accordion 
+    function myAccFunc() {
+      var x = document.getElementById("dropdown");
+      if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
-    } else {
+      } else {
         x.className = x.className.replace(" w3-show", "");
+      }
     }
-}
-  function myAccFunc3() {
-    var x = document.getElementById("dropdown3");
-    if (x.className.indexOf("w3-show") == -1) {
+
+    function myAccFunc2() {
+      var x = document.getElementById("dropdown2");
+      if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
-    } else {
+      } else {
         x.className = x.className.replace(" w3-show", "");
+      }
     }
-}
-// Click on the "Duties" link on page load to open the accordion for demo purposes
-// document.getElementById("myBtn2").click();  
-  
-</script>
+
+    function myAccFunc3() {
+      var x = document.getElementById("dropdown3");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    function myAccFunc4() {
+      var x = document.getElementById("dropdown4");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+    // Click on the "Duties" link on page load to open the accordion for demo purposes
+    // document.getElementById("myBtn2").click();
+  </script>
 
 </body>
+
 </html>

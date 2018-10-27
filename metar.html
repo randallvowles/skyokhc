@@ -74,15 +74,16 @@
     <hr>
 
     <div class="w3-container">
+      <form>
       <tr>
         <td align="left"> Airport: <input type="text" size="4" name="airport"></td>
         <td align="left"> Timeframe: <input type="text" size="2" name="timeframe"></td>
         <td align="left"> Radius: <input type="text" size="3" name="radius"></td>
-        <td align="left"><input name="search" type="button" onClick="apiSearch()" value="Search">
+        <td align="left"><input name="search" type="button" onClick="apiSearch(form)" value="Search">
           <br>
         </td>
       </tr>
-
+    </form>
       <h5 id="main_results">Main Results</h5>
 
 
@@ -113,12 +114,12 @@
 
 </body>
 <script>
-  function apiSearch() {
+  function apiSearch(form) {
     var apiURL =
       "https://www.aviationweather.gov/adds/dataserver_current/httpparam?dataSource=metars&requestType=retrieve&format=xml"
-    var airport = String(document.getElementById('airport'));
-    var timeframe = Number(document.getElementById('timeframe').value);
-    var radius = Number(document.getElementById('radius').value);
+    var airport = form.airport;
+    var timeframe = form.timeframe;
+    var radius = form.radius;
 
     var windowARGS = {
       "stationString": airport,

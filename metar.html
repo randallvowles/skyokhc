@@ -112,7 +112,7 @@
 <script>
   var apiURL =
     "https://www.aviationweather.gov/adds/dataserver_current/httpparam?dataSource=metars&requestType=retrieve&format=xml"
-  var airport = document.getElementsById('airport');
+  var airport = String(document.getElementsById('airport'));
   var timeframe = Number(document.getElementById('timeframe').value);
   var radius = Number(document.getElementById('radius').value);
 

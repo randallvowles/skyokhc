@@ -78,7 +78,7 @@
         <td align="left"> Airport: <input type="text" size="4" name="airport"></td>
         <td align="left"> Timeframe: <input type="text" size="2" name="timeframe"></td>
         <td align="left"> Radius: <input type="text" size="3" name="radius"></td>
-        <td align="left"><input name="search" type="button" onClick="jsonFetch()" value="Search">
+        <td align="left"><input name="search" type="button" onClick="apiSearch()" value="Search">
           <br>
         </td>
       </tr>
@@ -113,24 +113,24 @@
 
 </body>
 <script>
-  var apiURL =
-    "https://www.aviationweather.gov/adds/dataserver_current/httpparam?dataSource=metars&requestType=retrieve&format=xml"
-  var airport = String(document.getElementById('airport'));
-  var timeframe = Number(document.getElementById('timeframe').value);
-  var radius = Number(document.getElementById('radius').value);
+  function apiSearch() {
+    var apiURL =
+      "https://www.aviationweather.gov/adds/dataserver_current/httpparam?dataSource=metars&requestType=retrieve&format=xml"
+    var airport = String(document.getElementById('airport'));
+    var timeframe = Number(document.getElementById('timeframe').value);
+    var radius = Number(document.getElementById('radius').value);
 
-  var windowARGS = {
-    "stationString": airport,
-    "hoursBeforeNow": timeframe,
-    "radialDistance": radius
-  };
+    var windowARGS = {
+      "stationString": airport,
+      "hoursBeforeNow": timeframe,
+      "radialDistance": radius
+    };
 
+    jsonFetch(apiURL, windowARGS, function (d) {
+      console.log(d);
 
-  jsonFetch(apiURL, windowARGS, function (d) {
-    console.log(d);
-
-  })
-
+    })
+  }
 
   function jsonFetch(url, args, callback) {
     var request = new XMLHttpRequest();

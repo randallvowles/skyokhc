@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<title>SKY OKHC METAR Page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $("#sidebar").load("sidebar.html");
+    })
+  </script>
+</head>
+<style>
+  .wni-blue,
+  .wni-hover-blue:hover {
+    color: #0c419a;
+    background-color: #0c419a
+  }
+
+  .wni-bg {
+    background-color: #0c419a;
+  }
+
+  /* .w3-striped tbody tr:nth-child(even){background-color:#0c419a} */
+  .w3-hoverable tbody tr:hover,
+  .w3-ul.w3-hoverable li:hover {
+    background-color: #6d8dc2
+  }
+
+  .w3-centered tr th,
+  .w3-centered tr td {
+    text-align: center
+  }
+
+  html,
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: "Raleway", sans-serif
+  }
+</style>
+
+<body class="w3-white">
+
+  <!-- Top container -->
+  <!-- <div class="w3-bar w3-top wni-bg w3-large" style="z-index:4">
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i> &nbsp;Menu</button>
+  <span class="w3-bar-item w3-right">Logo</span>
+</div> -->
+
+  <div id="sidebar"></div>
+
+
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+    id="myOverlay"></div>
+
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main" style="margin-left:300px;margin-top:20px;">
+
+    <!-- Header -->
+    <header class="w3-container" style="padding-top:22px">
+      <h3 id="region_home"><b><i class="fa fa-home"></i> METAR Search Page</b></h3>
+    </header>
+
+    <hr>
+
+    <div class="w3-container">
+      <tr>
+        <td align="left"> Airport: <input type="text" size="4" name="airport"></td>
+        <td align="left"> Timeframe: <input type="text" size="2" name="timeframe"></td>
+        <td align="left"> Radius: <input type="text" size="3" name="radius"></td>
+      </tr>
+
+      <h5 id="main_results">Main Results</h5>
+
+
+      <!-- <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
+        <tr>
+          <td><a href=""></a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href=""></a></td>
+          <td></td>
+        </tr> -->
+      <!-- <tr>
+          <td><a href=""></a></td>
+    <td></td>
+  </tr><tr>
+    <td><a href=""></a></td>
+    <td></td>
+  </tr> -->
+      </table><br>
+
+    </div>
+    <hr>
+
+    <!-- End page content -->
+  </div>
+
+
+</body>
+<script>
+  var apiURL =
+    "https://www.aviationweather.gov/adds/dataserver_current/httpparam?dataSource=metars&requestType=retrieve&format=xml"
+  var airport = document.getElementsById('airport');
+  var timeframe = Number(document.getElementById('timeframe').value);
+  var radius = Number(document.getElementById('radius').value);
+
+  var windowARGS = {
+    "stationString": airport,
+    "hoursBeforeNow": timeframe,
+    "radialDistance": radius
+  };
+
+
+  jsonFetch(apiURL, windowARGS, function (d) {
+    console.log(d);
+
+  })
+
+
+  function jsonFetch(url, args, callback) {
+    var request = new XMLHttpRequest();
+    request.open("GET", serialize(url, args))
+    request.onreadystatechange = function () {
+      if (request.readyState === 4 && request.status === 200) {
+        callback(JSON.parse(request.responseText))
+      }
+    }
+    request.send(null);
+
+    function serialize(url, obj) {
+      var str = ['?'];
+      for (var p in obj) {
+        if (obj.hasOwnProperty(p)) {
+          str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+        }
+      }
+      return url + str.join("&");
+    }
+  }
+</script>
+
+</html>

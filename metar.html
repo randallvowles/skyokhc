@@ -79,7 +79,7 @@
           <td align="left"> Airport: <input type="text" size="4" name="airport"></td>
           <td align="left"> Timeframe: <input type="text" size="2" name="timeframe"></td>
           <td align="left"> Radius: <input type="text" size="3" name="radius"></td>
-          <td align="left"><input name="search" type="button" onClick="makeCorsRequest(form)" value="Search">
+          <td align="left"><input name="search" type="button" onClick="makeCorsRequest()" value="Search">
             <br>
           </td>
         </tr>
@@ -141,9 +141,9 @@
     // This is a sample server that supports CORS.
     var apiURL =
       "https://www.aviationweather.gov/adds/dataserver_current/httpparam?dataSource=metars&requestType=retrieve&format=xml"
-    var airport = form.airport;
-    var timeframe = form.timeframe;
-    var radius = form.radius;
+    var airport = form.airport.value;
+    var timeframe = form.timeframe.value;
+    var radius = form.radius.value;
     var url = apiURL + "&stationString=" + airport + "&hoursBeforeNow=" + timeframe + "&radialDistance=" + radius
     var xhr = createCORSRequest('GET', url);
     if (!xhr) {

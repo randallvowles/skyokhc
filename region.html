@@ -10,9 +10,9 @@
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script>
-    $<font color="red">(function <font color="red">()</font> {
-      $<font color="red">("#sidebar")</font>.load<font color="red">("sidebar.html")</font>;
-    })</font>
+    $(function () {
+      $("#sidebar").load("sidebar.html");
+    })
   </script>
 </head>
 <style>
@@ -26,7 +26,7 @@
     background-color: #0c419a;
   }
 
-  /* .w3-striped tbody tr:nth-child<font color="red">(even)</font>{background-color:#0c419a} */
+  /* .w3-striped tbody tr:nth-child(even){background-color:#0c419a} */
   .w3-hoverable tbody tr:hover,
   .w3-ul.w3-hoverable li:hover {
     background-color: #6d8dc2
@@ -60,7 +60,7 @@
 
 
   <!-- Overlay effect when opening sidebar on small screens -->
-  <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close<font color="red">()</font>" style="cursor:pointer"
+  <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
     title="close side menu" id="myOverlay"></div>
 
   <!-- !PAGE CONTENT! -->
@@ -199,7 +199,7 @@
           <td><font color="red">(North America, Europe)</font> <b>[RADAR]</b> <b>[Satellite]</b> <b>[Lightning]</b> <b>[Surface Analysis]</b></td>
         </tr>
         <tr>
-          <td><a target="_blank" href="https://earth.nullschool.net/">Earth <font color="red">(nullschool.net)</font></a></td>
+          <td><a target="_blank" href="https://earth.nullschool.net/">Earth (nullschool.net)</a></td>
           <td><b>[NWP Models]</b></td>
         </tr>
         <tr>
@@ -226,11 +226,11 @@
         </tr>
         <tr>
           <td><a target="_blank" href="http://sharaku.eorc.jaxa.jp/GSMaP/index.htm">Japanese Aerospace Exploration
-              Agency <font color="red">(JAXA)</font></a></td>
+              Agency (JAXA)</a></td>
           <td><b>[RADAR]</b></td>
         </tr>
         <tr>
-          <td><a target="_blank" href="https://www.fnmoc.navy.mil/wxmap_cgi/index.html">FNMOC <font color="red">(US Navy)</font></a></td>
+          <td><a target="_blank" href="https://www.fnmoc.navy.mil/wxmap_cgi/index.html">FNMOC (US Navy)</a></td>
           <td><b>[NWP Models]</b> <font color="red">(NVG, GFS, Military, Ensembles, Tropical storm)</font></td>
         </tr>
 
@@ -279,7 +279,7 @@
 
         <tr>
           <td><a target="_blank" href="http://rammb.cira.colostate.edu/ramsdis/online/goes-west_goes-east.asp">Regional
-              and Mesoscale Meteorology Branch <font color="red">(NOAA)</font></a></td>
+              and Mesoscale Meteorology Branch (NOAA)</a></td>
           <td><b>[Satellite]</b> <font color="red">(western North America)</font></td>
         </tr>
         <tr>
@@ -312,7 +312,7 @@
           <td><b>[Surface Observations]</b> <b>[RADAR]</b> <b>[Satellite]</b> <b>[NWP models]</b></td>
         </tr>
         <td><a target="_blank" href="http://www.inameh.gob.ve/web/imagenes.php">Natl. Inst. of Meteorology and Hydrology
-            <font color="red">(Venezuela)</font></a></td>
+            (Venezuela)</a></td>
         <td><b>[Satellite]</b> <b>[NWP Models]</b></td>
         </tr>
         <tr>
@@ -320,11 +320,11 @@
           <td><b>[Climatology]</b> <b>[Surface Observations]</b></td>
         </tr>
         <tr>
-          <td><a target="_blank" href="http://portal.cgna.gov.br/?l=en_uk">Portal Operacional <font color="red">(Brazil)</font></a></td>
+          <td><a target="_blank" href="http://portal.cgna.gov.br/?l=en_uk">Portal Operacional (Brazil)</a></td>
           <td><b>[Forecasts]</b> <b>[Airport configuration]</b></td>
         </tr>
         <tr>
-          <td><a target="_blank" href="https://www.redemet.aer.mil.br/index.php">REDEMET-S.America <font color="red">(Brazil)</font></a></td>
+          <td><a target="_blank" href="https://www.redemet.aer.mil.br/index.php">REDEMET-S.America (Brazil)</a></td>
           <td><b>[METARs]</b> <b>[TAFs]</b> <b>[RADAR]</b> <b>[Satellite]</b> <b>[NWP Models]</b> </td>
         </tr>
         <!-- <tr>
@@ -400,7 +400,7 @@
         <tr>
           <td><a target="_blank" href="http://rammb.cira.colostate.edu/ramsdis/online/himawari-8.asp">Regional and
               Mesoscale
-              Meteorology Branch <font color="red">(NOAA)</font></a></td>
+              Meteorology Branch (NOAA)</a></td>
           <td><b>[Satellite]</b></td>
         </tr>
         <tr>
@@ -414,7 +414,7 @@
         </tr>
         <tr>
           <td><a target="_blank" href="http://aviation.bmkg.go.id/web/">Meteorology Climatology and Geophysics Council
-              <font color="red">(Indonesia)</font></a></td>
+              (Indonesia)</a></td>
           <td><b>[RADAR]</b> <b>[Satellite]</b> <b>[Forecasts]</b> <b>[METAR]</b> <b>[TAF]</b></td>
         </tr>
         <tr>
@@ -456,7 +456,7 @@
       <h5 id="oceania">Oceania Forecasting Sites</h5>
       <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
         <tr>
-          <td><a target="_blank" href="http://www.weatherzone.com.au/radar">Weatherzone <font color="red">(AU)</font></a></td>
+          <td><a target="_blank" href="http://www.weatherzone.com.au/radar">Weatherzone (AU)</a></td>
           <td><b>[RADAR]</b> <b>[Satellite]</b> <b>[Surface Analysis]</b> <b>[Forecast]</b></td>
         </tr>
         <tr>
@@ -470,7 +470,7 @@
         <tr>
           <td><a target="_blank" href="http://rammb.cira.colostate.edu/ramsdis/online/himawari-8.asp">Regional and
               Mesoscale
-              Meteorology Branch <font color="red">(NOAA)</font></a></td>
+              Meteorology Branch (NOAA)</a></td>
           <td><b>[Satellite]</b></td>
         </tr>
         <tr>
@@ -486,7 +486,7 @@
       <h5 id="africa">Africa Forecasting Sites</h5>
       <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
         <tr>
-          <td><a target="_blank" href="http://metservice.intnet.mu/synoptic-chart.php">Mauritius <font color="red">(FIMP)</font> Met Services</a>
+          <td><a target="_blank" href="http://metservice.intnet.mu/synoptic-chart.php">Mauritius (FIMP) Met Services</a>
           </td>
           <td><b>[RADAR]</b> <b>[Surface Analysis]</b> <b>[Forecasts]</b></td>
         </tr>
@@ -533,7 +533,7 @@
         <tr>
           <td><a target="_blank"
               href="http://rammb.cira.colostate.edu/ramsdis/online/npp_viirs_southwest_asia.asp">Regional and
-              Mesoscale Meteorology Branch <font color="red">(NOAA)</font></a></td>
+              Mesoscale Meteorology Branch (NOAA)</a></td>
           <td><b>[Satellite]</b></td>
         </tr>
         <tr>
@@ -556,7 +556,7 @@
         <tr>
           <td><a target="_blank" href="http://rammb.cira.colostate.edu/ramsdis/online/himawari-8.asp">Regional and
               Mesoscale
-              Meteorology Branch <font color="red">(NOAA)</font></a></td>
+              Meteorology Branch (NOAA)</a></td>
           <td><b>[Satellite]</b></td>
         </tr>
         <tr>
@@ -579,7 +579,7 @@
         <tr>
           <td><a target="_blank" href="http://rammb.cira.colostate.edu/ramsdis/online/himawari-8.asp">Regional and
               Mesoscale
-              Meteorology Branch <font color="red">(NOAA)</font></a></td>
+              Meteorology Branch (NOAA)</a></td>
           <td><b>[Satellite]</b></td>
         </tr>
         <tr>
@@ -614,11 +614,11 @@
         <tr>
           <td><a target="_blank" href="http://rammb.cira.colostate.edu/ramsdis/online/himawari-8.asp">Regional and
               Mesoscale
-              Meteorology Branch <font color="red">(NOAA)</font></a></td>
+              Meteorology Branch (NOAA)</a></td>
           <td><b>[Satellite]</b></td>
         </tr>
         <tr>
-          <td><a target="_blank" href="http://eng.nmc.cn/">Chinese Meteorological Center <font color="red">(English)</font></a></td>
+          <td><a target="_blank" href="http://eng.nmc.cn/">Chinese Meteorological Center (English)</a></td>
           <td><b>[RADAR]</b> <b>[Satellite]</b> <b>[Surface Observations]</b> <b>[Forecasts]</b> <b>[Surface analysis]</b></td>
         </tr>
         <tr>
@@ -704,7 +704,7 @@
         <tr>
           <td><a target="_blank" href="http://rammb.cira.colostate.edu/ramsdis/online/himawari-8.asp">Regional and
               Mesoscale
-              Meteorology Branch <font color="red">(NOAA)</font></a></td>
+              Meteorology Branch (NOAA)</a></td>
           <td><b>[Satellite]</b></td>
         </tr>
         <tr>

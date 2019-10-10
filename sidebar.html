@@ -121,7 +121,7 @@
 
             
             </div>
-            <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-bar-item w3-button w3-padding w3-hover-white"
+            <a onclick="myAccFunc8()" href="javascript:void(0)" class="w3-bar-item w3-button w3-padding w3-hover-white"
             id="myBtn"><i class="fa fa-book fa-fw"></i>&nbsp; Resources <i class="fa fa-caret-down"></i>
         </a>
             <div id="dropdown8" class="w3-bar-block w3-hide w3-padding-large w3-medium">
@@ -215,6 +215,14 @@
 
     function myAccFunc7() {
         var x = document.getElementById("dropdown7");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+    function myAccFunc8() {
+        var x = document.getElementById("dropdown8");
         if (x.className.indexOf("w3-show") == -1) {
             x.className += " w3-show";
         } else {

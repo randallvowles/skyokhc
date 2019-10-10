@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<title>SKY OKHC COMET Modules</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#sidebar").load("sidebar.html");
+        })
+    </script>
+</head>
+<style>
+    .wni-blue,
+    .wni-hover-blue:hover {
+        color: #0c419a;
+        background-color: #0c419a
+    }
+
+    .wni-bg {
+        background-color: #0c419a;
+    }
+
+    /* .w3-striped tbody tr:nth-child(even){background-color:#0c419a} */
+    .w3-hoverable tbody tr:hover,
+    .w3-ul.w3-hoverable li:hover {
+        background-color: #6d8dc2
+    }
+
+    .w3-centered tr th,
+    .w3-centered tr td {
+        text-align: center
+    }
+
+    html,
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-family: "Raleway", sans-serif
+    }
+</style>
+
+<body class="w3-white">
+
+    <!-- Top container -->
+    <!-- <div class="w3-bar w3-top wni-bg w3-large" style="z-index:4">
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i> &nbsp;Menu</button>
+  <span class="w3-bar-item w3-right">Logo</span>
+</div> -->
+
+    <div id="sidebar"></div>
+
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+        title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px;margin-top:20px;">
+
+        <!-- Header -->
+        <header class="w3-container" style="padding-top:22px">
+            <h3 id="glossary"><b><i class="fa fa-home"></i> COMET Modules Resource Page</b></h3>
+        </header>
+
+        <hr>
+
+        <div class="w3-container">
+            <h5 id="conus">COMET Modules Pages</h5>
+            <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
+
+                <tr>
+                    <td><a target="_blank" href=""></a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href=""></a></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><a target="_blank" href=""></a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href=""></a></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><a target="_blank" href=""></a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href=""></a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href=""></a></td>
+                    <td></td>
+                </tr>
+
+
+                <tr>
+                    <td><a target="_blank" href=""></a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href=""></a></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><a target="_blank" href=""></a></td>
+                    <td></td>
+                </tr>
+            </table><br>
+
+
+        </div>
+        <hr>
+
+        <!-- End page content -->
+    </div>
+
+    <!-- <script>
+    // Get the Sidebar
+    var mySidebar = document.getElementById("mySidebar");
+
+    // Get the DIV with overlay effect
+    var overlayBg = document.getElementById("myOverlay");
+
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+      } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+      }
+    }
+
+    // Close the sidebar with the close button
+    function w3_close() {
+      mySidebar.style.display = "none";
+      overlayBg.style.display = "none";
+    }
+
+    // Accordion 
+    function myAccFunc() {
+      var x = document.getElementById("dropdown");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    function myAccFunc2() {
+      var x = document.getElementById("dropdown2");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    function myAccFunc3() {
+      var x = document.getElementById("dropdown3");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    function myAccFunc4() {
+      var x = document.getElementById("dropdown4");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+    // Click on the "Duties" link on page load to open the accordion for demo purposes
+    // document.getElementById("myBtn2").click();
+  </script> -->
+
+</body>
+
+</html>

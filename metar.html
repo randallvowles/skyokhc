@@ -141,10 +141,11 @@
         // This is a sample server that supports CORS.
         var apiURL =
           "https://www.aviationweather.gov/adds/dataserver_current/httpparam?dataSource=metars&requestType=retrieve&format=xml"
-        var airport = form.airport.value;
-        var timeframe = form.timeframe.value;
-        var radius = form.radius.value;
-        var url = apiURL + "&stationString=" + airport + "&hoursBeforeNow=" + timeframe + "&radialDistance=" + radius
+        // var airport = form.airport.value;
+        // var timeframe = form.timeframe.value;
+        // var radius = form.radius.value;
+        // var url = apiURL + "&stationString=" + airport + "&hoursBeforeNow=" + timeframe + "&radialDistance=" + radius
+        var url = apiURL + "&stationString=" + form.airport.value + "&hoursBeforeNow=" + form.timeframe.value + "&radialDistance=" + form.radius.value
         var xhr = createCORSRequest('GET', url);
         if (!xhr) {
           alert('CORS not supported');

@@ -145,7 +145,7 @@
         // var timeframe = form.timeframe.value;
         // var radius = form.radius.value;
         // var url = apiURL + "&stationString=" + airport + "&hoursBeforeNow=" + timeframe + "&radialDistance=" + radius
-        alert("Airport is " + form.airport.value)
+        // alert("Airport is " + form.airport.value)
         var url = apiURL + "&stationString=" + form.airport.value + "&hoursBeforeNow=" + form.timeframe.value + "&radialDistance=" + form.radius.value
         var xhr = createCORSRequest('GET', url);
         if (!xhr) {

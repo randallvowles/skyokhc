@@ -139,12 +139,12 @@
   // Make the actual CORS request.
   function makeCorsRequest() {
     // This is a sample server that supports CORS.
-    var apiURL =
-      "https://www.aviationweather.gov/adds/dataserver_current/httpparam?dataSource=metars&requestType=retrieve&format=xml"
+    var apiURL = "https://api.synopticdata.com/v2/stations/timeseries?"
+    var token = "bdbd2d22b8fd4e99bab72f4998806117"
     var airport = form.airport;
     var timeframe = form.timeframe;
     var radius = form.radius;
-    var url = apiURL + "&stationString=" + airport + "&hoursBeforeNow=" + timeframe + "&radialDistance=" + radius
+    var url = apiURL + "&token=" + token + "&stid=" + airport + "&recent=" + timeframe + "&radius=" + radius
     var xhr = createCORSRequest('GET', url);
     if (!xhr) {
       alert('CORS not supported');

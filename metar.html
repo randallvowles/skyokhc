@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>SKY OKHC METAR Page</title>
+<title>SKY OKHC METAR Search Page</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -60,8 +60,8 @@
 
 
   <!-- Overlay effect when opening sidebar on small screens -->
-  <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu"
-    id="myOverlay"></div>
+  <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+    title="close side menu" id="myOverlay"></div>
 
   <!-- !PAGE CONTENT! -->
   <div class="w3-main" style="margin-left:300px;margin-top:20px;">
@@ -76,9 +76,9 @@
     <div class="w3-container">
       <form>
         <tr>
-          <td align="left"> Airport: <input type="text" size="4" name="airport"></td>
-          <td align="left"> Timeframe: <input type="text" size="2" name="timeframe"></td>
-          <td align="left"> Radius: <input type="text" size="3" name="radius"></td>
+          <td align="left"> Airport: <input type="text" size="4" name="airport" id="airport"></td>
+          <td align="left"> Timeframe: <input type="text" size="2" name="timeframe" id="timeframe"></td>
+          <td align="left"> Radius: <input type="text" size="3" name="radius" id="radius"></td>
           <td align="left"><input name="search" type="button" onClick="makeCorsRequest(form)" value="Search">
             <br>
           </td>
@@ -109,33 +109,11 @@
     <hr>
 
     <!-- End page content -->
-  </div>
 
 
-</body>
-<script>
-  // Create the XHR object.
-  function createCORSRequest(method, url) {
-    var xhr = new XMLHttpRequest();
-    if ("withCredentials" in xhr) {
-      // XHR for Chrome/Firefox/Opera/Safari.
-      xhr.open(method, url, true);
-    } else if (typeof XDomainRequest != "undefined") {
-      // XDomainRequest for IE.
-      xhr = new XDomainRequest();
-      xhr.open(method, url);
-    } else {
-      // CORS not supported.
-      xhr = null;
-    }
-    return xhr;
-  }
 
-  // Helper method to parse the title tag from the response.
-  function getTitle(text) {
-    return text.match('<title>(.*)?</title>')[1];
-  }
 
+<<<<<<< HEAD
   // Make the actual CORS request.
   function makeCorsRequest() {
     // This is a sample server that supports CORS.
@@ -207,5 +185,105 @@
   //   }
   // }
 </script>
+=======
+    <script>
+      // Create the XHR object.
+      function createCORSRequest(method, url) {
+        var xhr = new XMLHttpRequest();
+        if ("withCredentials" in xhr) {
+          // XHR for Chrome/Firefox/Opera/Safari.
+          xhr.open(method, url, true);
+        } else if (typeof XDomainRequest != "undefined") {
+          // XDomainRequest for IE.
+          xhr = new XDomainRequest();
+          xhr.open(method, url);
+        } else {
+          // CORS not supported.
+          xhr = null;
+        }
+        return xhr;
+      }
+
+      // Helper method to parse the title tag from the response.
+      function getTitle(text) {
+        return text.match('<title>(.*)?</title>')[1];
+      }
+
+      // Make the actual CORS request.
+      function makeCorsRequest(form) {
+        // This is a sample server that supports CORS.
+        var apiURL =
+          "https://www.aviationweather.gov/adds/dataserver_current/httpparam?dataSource=metars&requestType=retrieve&format=xml"
+        // var airport = form.airport.value;
+        // var timeframe = form.timeframe.value;
+        // var radius = form.radius.value;
+        // var url = apiURL + "&stationString=" + airport + "&hoursBeforeNow=" + timeframe + "&radialDistance=" + radius
+        // alert("Airport is " + form.airport.value)
+        var url = apiURL + "&stationString=" + form.airport.value + "&hoursBeforeNow=" + form.timeframe.value + "&radialDistance=" + form.radius.value
+        var xhr = createCORSRequest('GET', url);
+        if (!xhr) {
+          alert('CORS not supported');
+          return;
+        }
+
+        // Response handlers.
+        xhr.onload = function () {
+          var text = xhr.responseText;
+          console.log(text);
+          var title = getTitle(text);
+          alert('Response from CORS request to ' + url + ': ' + title);
+        };
+
+        xhr.onerror = function () {
+          alert('Woops, there was an error making the request.');
+        };
+
+        xhr.send();
+      }
+
+
+      // function apiSearch(form) {
+      //   var apiURL =
+      //     "https://www.aviationweather.gov/adds/dataserver_current/httpparam?dataSource=metars&requestType=retrieve&format=xml"
+      //   var airport = form.airport;
+      //   var timeframe = form.timeframe;
+      //   var radius = form.radius;
+      //   var url = apiURL + "&stationString=" + airport + "&hoursBeforeNow=" + timeframe + "&radialDistance=" + radius
+      //   var windowARGS = {
+      //     "stationString" : airport,
+      //     "hoursBeforeNow": timeframe,
+      //     "radialDistance": radius
+      //   };
+
+      //   jsonFetch(apiURL, windowARGS, function (d) {
+      //     console.log(d);
+
+      //   })
+      // }
+
+      // function jsonFetch(url, args, callback) {
+      //   var request = new XMLHttpRequest();
+      //   request.open("GET", serialize(url, args))
+      //   request.onreadystatechange = function () {
+      //     if (request.readyState === 4 && request.status === 200) {
+      //       callback(JSON.parse(request.responseText))
+      //     }
+      //   }
+      //   request.send(null);
+
+      //   function serialize(url, obj) {
+      //     var str = ['?'];
+      //     for (var p in obj) {
+      //       if (obj.hasOwnProperty(p)) {
+      //         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+      //       }
+      //     }
+      //     return url + str.join("&");
+      //   }
+      // }
+    </script>
+  </div>
+</body>
+>>>>>>> e1e355daae0918e9726c1d89b5dc16668ab8ef87
 
 </html>

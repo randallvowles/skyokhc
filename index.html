@@ -9,18 +9,43 @@
 
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script> 
-    $(function(){
-      $("#sidebar").load("sidebar.html"); 
-    })    
+  <script>
+    $(function () {
+      $("#sidebar").load("sidebar.html");
+    })
   </script>
 </head>
 <style>
-  .wni-blue,.wni-hover-blue:hover{color:#0c419a;background-color:#0c419a}
-  .wni-bg {background-color: #0c419a;}
+  .wni-blue,
+  .wni-hover-blue:hover {
+    color: #0c419a;
+    background-color: #0c419a
+  }
+
+  .wni-bg {
+    background-color: #0c419a;
+  }
+
   /* .w3-striped tbody tr:nth-child(even){background-color:#0c419a} */
-  .w3-hoverable tbody tr:hover,.w3-ul.w3-hoverable li:hover{background-color:#6d8dc2}.w3-centered tr th,.w3-centered tr td{text-align:center}
-html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+  .w3-hoverable tbody tr:hover,
+  .w3-ul.w3-hoverable li:hover {
+    background-color: #6d8dc2
+  }
+
+  .w3-centered tr th,
+  .w3-centered tr td {
+    text-align: center
+  }
+
+  html,
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: "Raleway", sans-serif
+  }
 </style>
 
 <body class="w3-white">
@@ -35,8 +60,8 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
 
   <!-- Overlay effect when opening sidebar on small screens -->
-  <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu"
-    id="myOverlay"></div>
+  <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+    title="close side menu" id="myOverlay"></div>
 
   <!-- !PAGE CONTENT! -->
   <div class="w3-main" style="margin-left:300px;margin-top:20px;">
@@ -52,24 +77,27 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
       <h5>WNI Websites</h5>
       <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
         <tr>
-          <td><a href="http://commiiteweb.wni.co.jp/SKY/wiki/index.php?1.%E9%81%8B%E7%94%A8%E3%82%B5%E3%82%A4%E3%83%88">SKY
+          <td><a target="_blank"
+              href="http://commiiteweb.wni.co.jp/SKY/wiki/index.php?1.%E9%81%8B%E7%94%A8%E3%82%B5%E3%82%A4%E3%83%88">SKY
               Commiite Wiki</a></td>
           <td>Wiki page with links to other pages, look-up by region, etc.</td>
         </tr>
         <tr>
-          <td><a href="http://imaging1.wni.co.jp/SKY/view_metaf.cgi">SKY METAR Viewer</a></td>
+          <td><a target="_blank" href="http://imaging1.wni.co.jp/SKY/view_metaf.cgi">SKY METAR Viewer</a></td>
           <td>Look up recent METARs and model data by ICAO identifier</td>
         </tr>
         <tr>
-          <td><a href="http://sky-gong01-vmg.wni.co.jp/gong_main/">Integrated Operations Tool</a></td>
+          <td><a target="_blank" href="http://sky-gong03-vmg.wni.co.jp/gong_main/">Integrated Operations Tool</a></td>
           <td>Input forecasts, sorted by operational duty</td>
         </tr>
         <tr>
-          <td><a href="http://ouhtc.wni.co.jp/b/OUHTC/web/common/user/login.html#">OUHTC Login Page</a></td>
+          <td><a target="_blank" href="http://ouhtc.wni.co.jp/b/OUHTC/web/common/user/login.html#">OUHTC Login Page</a>
+          </td>
           <td>View duty checklists, read duty summaries on Change Control Board (CCB)</td>
         </tr>
         <tr>
-          <td><a href="http://nextgen.weathernews.com/foster/login.cgi">FOSTER NEXTGEN Login Page</a></td>
+          <td><a target="_blank" href="http://nextgen.weathernews.com/foster/login.cgi">FOSTER NEXTGEN Login Page</a>
+          </td>
           <td>Global Map with airport METARs, overlay satellite and/or RADAR imagery, view model data</td>
         </tr>
       </table><br>
@@ -77,23 +105,24 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
       <h5>Airport Resources</h5>
       <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
         <tr>
-          <td><a href="http://worldaerodata.com/">World Aero Data</a></td>
+          <td><a target="_blank" href="http://worldaerodata.com/">World Aero Data</a></td>
           <td>Airport ICAO Look-up, geographical info</td>
         </tr>
         <tr>
-          <td><a href="http://www.gcmap.com/">Great Circle Mapper</a></td>
+          <td><a target="_blank" href="http://www.gcmap.com/">Great Circle Mapper</a></td>
           <td>Airport ICAO Look-up, maps and layout</td>
         </tr>
         <tr>
-          <td><a href="https://checkwx.com/">CheckWX Aviation Weather</a></td>
+          <td><a target="_blank" href="https://checkwx.com/">CheckWX Aviation Weather</a></td>
           <td>Airport Information and up-to-date METARs/TAFs</td>
         </tr>
         <tr>
-          <td><a href="https://www.ofcm.gov/publications/fmh/FMH1/FMH1.pdf">Federal Meteorology Handbook</a></td>
+          <td><a target="_blank" href="https://www.ofcm.gov/publications/fmh/FMH1/FMH1.pdf">Federal Meteorology
+              Handbook</a></td>
           <td>METAR and surface observation info</td>
         </tr>
         <tr>
-          <td><a href="https://en.wikipedia.org/wiki/Metar">METAR Wikipedia</a></td>
+          <td><a target="_blank" href="https://en.wikipedia.org/wiki/Metar">Wikipedia: METAR</a></td>
           <td>METAR information and decoding</td>
         </tr>
       </table><br>
@@ -152,31 +181,31 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     </form>
     <script language="JavaScript">
       function computecw(form) {
-    if (form.runway.value == "" || form.winddir.value == "" || form.windspeed.value == "") { 
-      alert("Enter Runway Direction, Win Direction and Wind Speed") 
-    } else {
-      var dirdiff = (form.winddir.value-form.runway.value)
-      if (dirdiff < 0) {
-        dirdiff = -dirdiff 
-      } else {}
-      var xwind = (form.windspeed.value * (Math.sin (0.0174 * dirdiff)))
-      if (xwind < 0) {
-      xwind = -xwind
-      } else {}
-      if (form.runway.value-form.winddir.value == 180) {
-        var twind = form.windspeed.value
-      } else {
-        if (form.winddir.value-form.runway.value == 180) {
-          var twind = -form.windspeed.value
+        if (form.runway.value == "" || form.winddir.value == "" || form.windspeed.value == "") {
+          alert("Enter Runway Direction, Wind Direction and Wind Speed")
         } else {
-          var twind = (form.windspeed.value * (Math.cos (0.0174 * dirdiff)))
+          var dirdiff = (form.winddir.value - form.runway.value)
+          if (dirdiff < 0) {
+            dirdiff = -dirdiff
+          } else {}
+          var xwind = (form.windspeed.value * (Math.sin(0.0174 * dirdiff)))
+          if (xwind < 0) {
+            xwind = -xwind
+          } else {}
+          if (form.runway.value - form.winddir.value == 180) {
+            var twind = form.windspeed.value
+          } else {
+            if (form.winddir.value - form.runway.value == 180) {
+              var twind = -form.windspeed.value
+            } else {
+              var twind = (form.windspeed.value * (Math.cos(0.0174 * dirdiff)))
+            }
+          }
+          form.crosswind.value = (Math.round(xwind))
+          form.tailwind.value = (Math.round(twind))
         }
       }
-    form.crosswind.value = (Math.round(xwind))
-    form.tailwind.value = (Math.round(twind))
-    }
-	  }
-	 </script>
+    </script>
 
 
     <hr>
@@ -197,7 +226,8 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
                         <td>Answers = </td>
                       </tr>
                       <tr>
-                        <td><input checked="checked" name="windunit" type="radio" value="on" /> mph (miles per hour)</td>
+                        <td><input checked="checked" name="windunit" type="radio" value="on" /> mph (miles per hour)
+                        </td>
                         <td><input name="Mph" size="5" type="text" /> mph</td>
                       </tr>
                       <tr>
@@ -217,7 +247,8 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
                         <td><input name="Kmph" size="5" type="text" /> km/h</td>
                       </tr>
                       <tr>
-                        <td><input onclick="decideConvert(document.Convert.Windspeed.value)" type="button" value="Convert" /></td>
+                        <td><input onclick="decideConvert(document.Convert.Windspeed.value)" type="button"
+                            value="Convert" /></td>
                         <td><input onclick="setToNull()" type="button" value="Clear Values" /></td>
                       </tr>
                     </tbody>
@@ -245,24 +276,28 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
                     <td width="50%">
                       <center>
                         <input size="8" name="inputbox1" onChange="eval('c.value = ' + this.form.Cexpr.value)"> °F<INPUT
-                          TYPE="hidden" NAME="Cexpr" VALUE="((Math.round((100/(212-32) * (inputbox1.value - 32))*100)))/100"><input
-                          Type="hidden" name="Fexpr" value="(Math.round(((212-32)/100 * c.value + 32)*100))/100"><br>
-                        <INPUT name="c" onChange="eval('inputbox1.value = ' + this.form.Fexpr.value)" size="8"> °C</center>
+                          TYPE="hidden" NAME="Cexpr"
+                          VALUE="((Math.round((100/(212-32) * (inputbox1.value - 32))*100)))/100"><input Type="hidden"
+                          name="Fexpr" value="(Math.round(((212-32)/100 * c.value + 32)*100))/100"><br>
+                        <INPUT name="c" onChange="eval('inputbox1.value = ' + this.form.Fexpr.value)" size="8"> °C
+                      </center>
                     </td>
-                    <INPUT TYPE="hidden" NAME="Cexpr2" VALUE="((Math.round((100/(212-32) * (inputbox2.value - 32))*100)))/100"><input
-                      Type="hidden" name="Fexpr2" value="(Math.round(((212-32)/100 * c2.value + 32)*100))/100">
+                    <INPUT TYPE="hidden" NAME="Cexpr2"
+                      VALUE="((Math.round((100/(212-32) * (inputbox2.value - 32))*100)))/100"><input Type="hidden"
+                      name="Fexpr2" value="(Math.round(((212-32)/100 * c2.value + 32)*100))/100">
                     <td width="50%">
                       <center>
                         <input size="8" name="inputbox2" onChange="eval('c2.value = ' + this.form.Cexpr2.value)"
                           onKeyDown="if(event.keyCode==13) event.keyCode=9;"> °F<br>
-                        <INPUT name="c2" onChange="eval('inputbox2.value = ' + this.form.Fexpr2.value)" onKeyDown="if(event.keyCode==13) event.keyCode=9;"
-                          size="8"> °C</center>
+                        <INPUT name="c2" onChange="eval('inputbox2.value = ' + this.form.Fexpr2.value)"
+                          onKeyDown="if(event.keyCode==13) event.keyCode=9;" size="8"> °C</center>
                     </td>
                   </tr>
                   <tr>
                     <td colspan="2" align="center" width="50%">
                       <font size="2">&nbsp; </font>
-                      <font>&nbsp;<input type="button" name="C2F" value="Calculate" onclick="inputtest(this.form,this)">&nbsp;&nbsp;
+                      <font>&nbsp;<input type="button" name="C2F" value="Calculate"
+                          onclick="inputtest(this.form,this)">&nbsp;&nbsp;
                       </font>
                       <input type="reset" value="Reset">
                     </td>
@@ -519,7 +554,6 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
       document.Convert.Ftps.value = "";
       document.Convert.Windspeed.value = "";
     }
-
   </script>
 
 </body>

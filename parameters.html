@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
-<title>SKY OKHC Regional Page</title>
+<title>SKY OKHC Parameters Page</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script> 
-    $(function(){
-      $("#sidebar").load("sidebar.html"); 
-    })    
-  </script>
-</head><head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#sidebar").load("sidebar.html");
+        })
+    </script>
+</head>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <style>
     .wni-blue,
@@ -57,12 +60,12 @@
   <span class="w3-bar-item w3-right">Logo</span>
 </div> -->
 
-  <div id="sidebar"></div>
+    <div id="sidebar"></div>
 
 
     <!-- Overlay effect when opening sidebar on small screens -->
-    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu"
-        id="myOverlay"></div>
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+        title="close side menu" id="myOverlay"></div>
 
     <!-- !PAGE CONTENT! -->
     <div class="w3-main" style="margin-left:300px;margin-top:20px;">
@@ -78,94 +81,178 @@
 
             <h5 id="radar">RADAR Sites</h5>
             <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
+
                 <tr>
-                    <td><a href="http://sharaku.eorc.jaxa.jp/GSMaP/index.htm">Japanese Aerospace Exploration Agency
-                            (JAXA)</a></td>
-                    <td>Global RADAR composition</td>
+                    <td><a target="_blank" href="https://nl.sat24.com/nl/af/rain">[AFRICA]</a></td>
                 </tr>
                 <tr>
-                    <td><a href="http://www.weather.gov/Radar">NWS Doppler Radar National Mosaic</a></td>
-                    <td>RADAR for CONUS, AK, Guam, Hawaii, Puerto Rico</td>
-                </tr>
-                <tr>
-                    <td><a href="http://www.radareu.cz/">European Rainfall Radar Map</a></td>
-                    <td>Composite RADAR for most of Europe</td>
-                </tr>
-                <tr>
-                    <td><a href="http://stored1.wni.co.jp/EuroRadar/">WNI Europe Composite RADAR</a></td>
-                    <td>Current RADAR imagery for UK, France, and Germany</td>
-                </tr>
-                <tr>
-                    <td><a href="http://www.smhi.se/en/weather/precipitation-and-cloudiness/rainfall-radar">Swedish
-                            Meteorological and Hydrological Institute</a></td>
-                    <td>RADAR for Sweden, Norway and Denmark</td>
-                </tr>
-                <tr>
-                    <td><a href="http://www.weatherzone.com.au/radar">Weatherzone (AU)</a></td>
-                    <td>RADAR for Australia</td>
-                </tr>
-                <tr>
-                    <td><a href="http://en.weather.com.cn/radar/">Weather China (English)</a></td>
-                    <td>RADAR, satellite, surface observations</td>
+                    <td><a target="_blank" href="https://www.smn.gob.ar/radar_new">[ARGENTINA]</a></td>
                 </tr>
 
+                <tr>
+                    <td><a target="_blank" href="http://www.weatherzone.com.au/radar">[AUSTRALIA]</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://www.redemet.aer.mil.br/">[BRAZIL]</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="http://en.weather.com.cn/radar/">[CHINA]</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank"
+                            href="http://www.smhi.se/en/weather/precipitation-and-cloudiness/rainfall-radar">[DENMARK]
+                            [NORWAY] [SWEDEN]</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="http://www.radareu.cz/">[EUROPE]</a></td>
+                </tr>
+
+                <tr>
+                    <td><a target="_blank" href="http://stored1.wni.co.jp/EuroRadar/">[FRANCE] [GERMANY] [UK]</a></td>
+                </tr>
+
+                <!-- <tr>
+                    <td><a target="_blank" href="">[]</a></td>
+                </tr> -->
+
+                <tr>
+                    <td><a target="_blank" href="https://www.rainviewer.com/">[GLOBAL (RainViewer)]</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="http://sharaku.eorc.jaxa.jp/GSMaP/index.htm">[GLOBAL (Japan)]</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank"
+                            href="https://radar.weather.gov/radar.php?rid=gua&product=N0R&overlay=11101111&loop=yes">[GUAM]
+                            [SAIPAN]</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="http://www.hko.gov.hk/wxinfo/radars/radar_range0.htm?&">[HONG KONG]</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="http://www.imd.gov.in/pages/radar_main.php">[INDIA]</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="http://www.bmkg.go.id/cuaca/citra-radar.bmkg?lang=EN">[INDONESIA]</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="http://www.met.gov.my/">[MALAYSIA]</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://www.moezala.gov.mm/radar-image">[MYANMAR]</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://www.metservice.com/maps-radar/rain-radar/all-new-zealand">[NEW
+                            ZEALAND]</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank"
+                            href="http://meteocentre.com/radar/weather-radar.php?lang=en&area=na&map=ref240&anim=0&refresh=120">[NORTH
+                            AMERICA]</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank"
+                            href="https://www.yr.no/kart/#lat=65.00146&lon=19.54158&zoom=4&laga=radar&proj=3575">[NORWAY]</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://www.pancanal.com/eng/radar/main.html">[PANAMA]</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://v2-cloud.meteopilipinas.gov.ph/">[PHILIPPINES]</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="http://web.kma.go.kr/eng/weather/images/radar.jsp">[SOUTH KOREA]</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://www.cwb.gov.tw/V7e/observe/radar/">[TAIWAN]</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="http://weather.tmd.go.th/THA_loop.php">[THAILAND]</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="http://www.nchmf.gov.vn/web/en-US/73/Default.aspx">[VIETNAM]</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://www.ncm.ae/en/index.html#!/Radar_UAE_Merge/8803">[UNITED ARAB
+                            EMIRATES]</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://www.aviationweather.gov/radar">[USA (AWC)]</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="http://www.weather.gov/Radar">[USA (NWS)]</a></td>
+                </tr>
 
 
             </table><br>
             <h5 id="satellite">SATELLITE Sites</h5>
             <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
                 <tr>
-                    <td><a href="http://satrecv1.wni.co.jp/sat/monitor/index.html">WNI Satellite Imagery Compilation</a></td>
+                    <td><a target="_blank" href="http://satrecv1.wni.co.jp/sat/monitor/index.html">WNI Satellite Imagery
+                            Compilation</a></td>
                     <td>Compiliation of all satellite images (including different bands)</td>
                 </tr>
                 <tr>
-                    <td><a href="http://www.goes.noaa.gov/">NOAA GOES server</a></td>
+                    <td><a target="_blank" href="http://www.goes.noaa.gov/">NOAA GOES server</a></td>
                     <td>GOES-W, Himawari-8, Indian Ocean, Meteosat</td>
                 </tr>
                 <tr>
-                    <td><a href="https://en.sat24.com/en/">SAT24</a></td>
+                    <td><a target="_blank" href="https://en.sat24.com/en/">SAT24</a></td>
                     <td>Collection of all satellite imagery, global zoomed in views</td>
                 </tr>
                 <tr>
-                    <td><a href="http://weather.cod.edu/satrad/exper/">College of DuPage Experimental Satellite</a></td>
+                    <td><a target="_blank" href="http://weather.cod.edu/satrad/exper/">College of DuPage Experimental
+                            Satellite</a></td>
                     <td>CONUS Satellite imagery (16 bands)</td>
                 </tr>
                 <tr>
-                    <td><a href="http://rammb.cira.colostate.edu/ramsdis/online/goes-west_goes-east.asp">Regional and
+                    <td><a target="_blank"
+                            href="http://rammb.cira.colostate.edu/ramsdis/online/goes-west_goes-east.asp">Regional and
                             Mesoscale
                             Meteorology Branch (NOAA)</a></td>
                     <td>GOES-W imagery</td>
                 </tr>
                 <tr>
-                    <td><a href="https://www.star.nesdis.noaa.gov/GOES/index.php">GOES-E Image Viewer</a></td>
+                    <td><a target="_blank" href="https://www.star.nesdis.noaa.gov/GOES/index.php">GOES-E Image
+                            Viewer</a></td>
                     <td>Satellite for eastern CONUS, South America</td>
                 </tr>
                 <tr>
-                    <td><a href="http://www.inmet.gov.br/portal/http://www.inmet.gov.br/satelites/?area=0&produto=G12_AS_TN">Brazil
+                    <td><a target="_blank"
+                            href="http://www.inmet.gov.br/portal/http://www.inmet.gov.br/satelites/?area=0&produto=G12_AS_TN">Brazil
                             National Institute of Meteorology</a></td>
                     <td>South America satellite</td>
                 </tr>
                 <tr>
-                    <td><a href="http://www.ssd.noaa.gov/imagery/wpac.html">NOAA Western Pacific Satellite Imagery</a></td>
+                    <td><a target="_blank" href="http://www.ssd.noaa.gov/imagery/wpac.html">NOAA Western Pacific
+                            Satellite Imagery</a></td>
                     <td>Himawari-8 satellite images and loops (VIS, IR, WV, etc)</td>
                 </tr>
                 <tr>
-                    <td><a href="http://rammb.cira.colostate.edu/ramsdis/online/himawari-8.asp">Regional and Mesoscale
+                    <td><a target="_blank" href="http://rammb.cira.colostate.edu/ramsdis/online/himawari-8.asp">Regional
+                            and Mesoscale
                             Meteorology Branch (NOAA)</a></td>
                     <td>Himawari-8 satellite imagery</td>
                 </tr>
                 <tr>
-                    <td><a href="http://www.weatherzone.com.au/satellite/infrared">Weatherzone (AU)</a></td>
+                    <td><a target="_blank" href="http://www.weatherzone.com.au/satellite/infrared">Weatherzone (AU)</a>
+                    </td>
                     <td>Satellite imagery for Australia</td>
                 </tr>
                 <tr>
-                    <td><a href="http://rammb.cira.colostate.edu/ramsdis/online/npp_viirs_southwest_asia.asp">Regional
+                    <td><a target="_blank"
+                            href="http://rammb.cira.colostate.edu/ramsdis/online/npp_viirs_southwest_asia.asp">Regional
                             and
                             Mesoscale Meteorology Branch (NOAA)</a></td>
                     <td>Middle East satellite imagery</td>
                 </tr>
                 <tr>
-                    <td><a href="http://nmsc.kma.go.kr/html/homepage/en/satellite/searchSatelliteImageN.do?data_type=1001">Korean
+                    <td><a target="_blank"
+                            href="http://nmsc.kma.go.kr/html/homepage/en/satellite/searchSatelliteImageN.do?data_type=1001">Korean
                             National Meteorological Satellite Center</a></td>
                     <td>Satellite images for East Asia</td>
                 </tr>
@@ -177,11 +264,13 @@
             <h5 id="lightning">Lightning Detection Sites</h5>
             <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
                 <tr>
-                    <td><a href="http://en.blitzortung.org/live_lightning_maps.php">Blitzortung Lightning Map</a></td>
+                    <td><a target="_blank" href="http://en.blitzortung.org/live_lightning_maps.php">Blitzortung
+                            Lightning Map</a></td>
                     <td>Real-time global lightning map</td>
                 </tr>
                 <tr>
-                    <td><a href="https://sfericmaps.enterprise.earthnetworks.com/maps">Earth Networks</a></td>
+                    <td><a target="_blank" href="https://sfericmaps.enterprise.earthnetworks.com/maps">Earth
+                            Networks</a></td>
                     <td>Surface observations, lightning (username: "akira@wni.com", password: "WNIdayo188")</td>
                 </tr>
 
@@ -193,34 +282,36 @@
             <h5 id="surface_obs">Surface Observation Sites</h5>
             <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
                 <tr>
-                    <td><a href="https://www.windy.com/">Windy</a></td>
+                    <td><a target="_blank" href="https://www.windy.com/">Windy</a></td>
                     <td>Mainly surface observations, some upper-level (wind, temp, clouds, satellite). METARs and TAFs,
                         extended
                         localized forecasts as well.</td>
                 </tr>
                 <tr>
-                    <td><a href="https://www.wunderground.com/wundermap">WeatherUnderground WunderMap</a></td>
+                    <td><a target="_blank" href="https://www.wunderground.com/wundermap">WeatherUnderground
+                            WunderMap</a></td>
                     <td>Surface observations, RADAR, satellite, fronts, some model data. Severe weather (fires,
                         hurricanes/typhoons, lightning).</td>
                 </tr>
                 <tr>
-                    <td><a href="http://weather.uwyo.edu/upperair/sounding.html">University of Wyoming Sounding</a></td>
+                    <td><a target="_blank" href="http://weather.uwyo.edu/upperair/sounding.html">University of Wyoming
+                            Sounding</a></td>
                     <td>Global upper air soundings (all participating airports or other sites)</td>
                 </tr>
                 <tr>
-                    <td><a href="https://earth.nullschool.net/">Earth (nullschool.net)</a></td>
+                    <td><a target="_blank" href="https://earth.nullschool.net/">Earth (nullschool.net)</a></td>
                     <td>Global map of temp, wind, pressure, precip</td>
                 </tr>
                 <tr>
-                    <td><a href="http://www.aviationweather.gov">Aviation Weather Center</a></td>
+                    <td><a target="_blank" href="http://www.aviationweather.gov">Aviation Weather Center</a></td>
                     <td>METARs/TAFs (global), surface observations, RADAR, satellite, forecast products</td>
                 </tr>
                 <tr>
-                    <td><a href="https://v2.meteopilipinas.gov.ph/#">PAGASA interactive map</a></td>
+                    <td><a target="_blank" href="https://v2.meteopilipinas.gov.ph/#">PAGASA interactive map</a></td>
                     <td>Phillipines: surface observations, RADAR, satellite imagery, etc.</td>
                 </tr>
                 <tr>
-                    <td><a href="http://www.hko.gov.hk/contente.htm">Hong Kong Observatory</a></td>
+                    <td><a target="_blank" href="http://www.hko.gov.hk/contente.htm">Hong Kong Observatory</a></td>
                     <td>Surface observations, weather charts, forecasts</td>
                 </tr>
 
@@ -231,15 +322,18 @@
             <h5 id="analysis">Surface Analysis Sites</h5>
             <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
                 <tr>
-                    <td><a href="http://meteocentre.com/analysis/map-surface.php?lang=en&area=us">MeteoCentre UQAM</a></td>
+                    <td><a target="_blank"
+                            href="http://meteocentre.com/analysis/map-surface.php?lang=en&area=us">MeteoCentre UQAM</a>
+                    </td>
                     <td>(North America, Europe) RADAR, satellite, lightning, radiosondes, surface analysis</td>
                 </tr>
                 <tr>
-                    <td><a href="https://www.nhc.noaa.gov/marine/">National Hurricane Center</a></td>
+                    <td><a target="_blank" href="https://www.nhc.noaa.gov/marine/">National Hurricane Center</a></td>
                     <td>Tropical storm information, surface analysis, forecasts</td>
                 </tr>
                 <tr>
-                    <td><a href="http://www.wpc.ncep.noaa.gov/html/sfc2.shtml">NWS Weather Prediction Center</a></td>
+                    <td><a target="_blank" href="http://www.wpc.ncep.noaa.gov/html/sfc2.shtml">NWS Weather Prediction
+                            Center</a></td>
                     <td>Surface analysis maps</td>
                 </tr>
 
@@ -252,40 +346,114 @@
             <h5 id="nwp">Numerical Weather Prediction Sites</h5>
             <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
                 <tr>
-                    <td><a href="https://www.tropicaltidbits.com/analysis/models/">Tropical Tidbits</a></td>
+                    <td><a target="_blank" href="https://www.tropicaltidbits.com/analysis/models/">Tropical Tidbits</a>
+                    </td>
                     <td>GFS, ECMWF Model maps, GEFS, GEPS ensemble maps</td>
                 </tr>
                 <tr>
-                    <td><a href="https://earth.nullschool.net/">Earth (nullschool.net)</a></td>
+                    <td><a target="_blank" href="https://earth.nullschool.net/">Earth (nullschool.net)</a></td>
                     <td>Global map of temp, wind, pressure, precip</td>
                 </tr>
                 <tr>
-                    <td><a href="https://ready.arl.noaa.gov/READYcmet.php">NOAA Air Resources Laboratory</a></td>
+                    <td><a target="_blank" href="https://ready.arl.noaa.gov/READYcmet.php">NOAA Air Resources
+                            Laboratory</a></td>
                     <td>Location forecasts, soundings, meteograms, windrose, etc</td>
                 </tr>
                 <tr>
-                    <td><a href="https://www.fnmoc.navy.mil/wxmap_cgi/index.html">FNMOC (US Navy)</a></td>
+                    <td><a target="_blank" href="https://www.fnmoc.navy.mil/wxmap_cgi/index.html">FNMOC (US Navy)</a>
+                    </td>
                     <td>Global Models (NVG, GFS, Military, Ensembles)</td>
                 </tr>
                 <tr>
-                    <td><a href="http://www.wetterzentrale.de/en/default.php">Wetterzentrale</a></td>
+                    <td><a target="_blank" href="http://www.wetterzentrale.de/en/default.php">Wetterzentrale</a></td>
                     <td>German Weather Bureau site for viewing MOS meteograms</td>
                 </tr>
                 <tr>
-                    <td><a href="https://www.meteoblue.com"></a>Meteoblue</td>
+                    <td><a target="_blank" href="https://www.meteoblue.com"></a>Meteoblue</td>
                     <td>Weather forecasts, ensemble models, meteograms, webcams</td>
                 </tr>
                 <tr>
-                    <td><a href="http://weather.cod.edu/analysis/">College of DuPage Weather Lab</a></td>
+                    <td><a target="_blank" href="http://weather.cod.edu/analysis/">College of DuPage Weather Lab</a>
+                    </td>
                     <td>[USA] Surface maps, upper air maps, soundings, RAP mesoanalysis</td>
                 </tr>
                 <tr>
-                    <td><a href="http://www.monsoondata.org/wx2/">India Monsoon Data</a></td>
+                    <td><a target="_blank" href="http://www.monsoondata.org/wx2/">India Monsoon Data</a></td>
                     <td>Weather analysis, forecast meteograms, regional forecasts</td>
                 </tr>
 
 
 
+            </table><br>
+            <h5 id="tropicalstorm">Tropical Storm Forecasting Sites</h5>
+            <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
+                <tr>
+                    <td><a target="_blank" href="http://commiiteweb.wni.co.jp/PRISM/GSC/WNI_Global_TC_Outlook.htm">WNI
+                            Global Tropical Cyclone
+                            Outlook</a></td>
+                    <td>All active tropical storms, links to model tracks and storm details</td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="http://tfms-db.wni.co.jp/wx/trop_list.cgi?ttl=1&db=FMS">WNI Tropical
+                            Storm data</a></td>
+                    <td>Current storms, tracks, intensity, forecasts</td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="http://hurricanes.ral.ucar.edu/realtime/current/">NCAR Tropical
+                            Guidance Project | RAL</a></td>
+                    <td>Current storms, tracks, forecasts, ensemble data</td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="http://www.usno.navy.mil/JTWC/">Joint Typhoon Warning Center</a></td>
+                    <td>Current storms, warnings, graphics, satellite imagery</td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="http://tropic.ssec.wisc.edu/#">Tropical Cyclones</a></td>
+                    <td>Satellite imagery for current tropical storms</td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="https://www.nhc.noaa.gov/marine/">National Hurricane Center</a></td>
+                    <td>Tropical storm information, surface analysis, forecasts</td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="http://www.jma.go.jp/en/typh/index.html">Japan Meteorological
+                            Agency</a></td>
+                    <td>Tropical cyclone information</td>
+                </tr>
+                <!-- <tr>
+            <td><a target="_blank" href=""></a></td>
+            <td></td>
+          </tr> -->
+            </table><br>
+            <h5 id="haze">Haze Sites</h5>
+            <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
+                <tr>
+                    <td><a target="_blank" href="http://imaging3.wni.co.jp/aq/haze/haze_view.html">OWN Haze Point
+                            Data</a></td>
+                    <td>OWN Model haze point data for SE Asia</td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="http://imaging3.wni.co.jp/aq/haze/haze.html">OWN AQI Visualization</a>
+                    </td>
+                    <td>OWN Model AQI visualization for SE Asia</td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="http://asmc.asean.org/home/">ASEAN Specialised Meteorological
+                            Centre</a></td>
+                    <td>Haze data, precipitation, and satellite imagery for SE Asia</td>
+                </tr>
+                <tr>
+                    <td><a target="_blank"
+                            href="https://fires.globalforestwatch.org/map/#activeLayers=viirsFires%2CactiveFires%2CwindDirection&activeBasemap=dark-gray&activeImagery=&planetCategory=PLANET-MONTHLY&planetPeriod=Jan%200000&x=110.500671&y=-1.496026&z=6">Global
+                            Forest Watch Fires</a></td>
+                    <td>Global wild fires and air pollution data</td>
+                </tr>
+                <tr>
+                    <td><a target="_blank"
+                            href="https://worldview.earthdata.nasa.gov/?v=-433.4078284785356,-95.6331695388123,106.59217152146442,167.8980804611877&t=2019-09-14-T22%3A23%3A43Z&l=MODIS_Aqua_Thermal_Anomalies_All,Reference_Labels,Reference_Features,Coastlines,VIIRS_SNPP_CorrectedReflectance_TrueColor(hidden),MODIS_Aqua_CorrectedReflectance_TrueColor(hidden),MODIS_Terra_CorrectedReflectance_TrueColor">NASA
+                            Worldview</a></td>
+                    <td>Global satellite imagery, wild fires, and pollution data</td>
+                </tr>
             </table><br>
 
             <!-- End page content -->

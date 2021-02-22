@@ -118,7 +118,7 @@
         var airport = form.airport;
         var timeframe = form.timeframe;
         var radius = form.radius;
-        console.log("bang!")
+        // console.log("bang!")
         $.getJSON('https://api.synopticdata.com/v2/stations/latest', {
             // specify the request parameters here
             stid: airport,
@@ -130,7 +130,7 @@
           function (result) {
             console.log("trying...")
             $.each(result, function (i, field) {
-              $("main_results"), append(field + " ");
+              $("main_results").append(field + " ");
             })
           })
         // console.log(data);

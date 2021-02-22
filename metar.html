@@ -120,19 +120,25 @@
         var radius = form.radius;
         // console.log("bang!")
         $.getJSON('https://api.synopticdata.com/v2/stations/latest', {
-            // specify the request parameters here
-            stid: airport,
-            within: timeframe,
-            radius: radius,
-            token: tkn
+          // specify the request parameters here
+          stid: airport,
+          within: timeframe,
+          radius: radius,
+          token: tkn
 
-          },
-          function (result) {
-            console.log("trying...")
-            $.each(result, function (i, field) {
-              $("main_results").append(field + " ");
-            })
+        }, function (result) {
+          $.each(result, function (i, field) {
+            $("div").append(field + " ");
+
+
+            // <!-- 
+            //           function (result) {
+            //             console.log("trying...")
+            //             $.each(result, function (i, field) {
+            //               $("main_results").append(field + " ");
+            //             })
           })
+        })
         // console.log(data);
 
         // function (data) {

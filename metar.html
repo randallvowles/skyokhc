@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
     $(function () {
       $("#sidebar").load("sidebar.html");
@@ -79,7 +79,7 @@
           <td align="left"> Airport: <input type="text" size="4" name="airport" id="airport"></td>
           <td align="left"> Timeframe: <input type="text" size="2" name="timeframe" id="timeframe"></td>
           <td align="left"> Radius: <input type="text" size="3" name="radius" id="radius"></td>
-          <td align="left"><input name="search" type="button" onClick="makeCorsRequest(form)" value="Search">
+          <td align="left"><input name="search" type="button" onClick="fetchdata(form)" value="Search">
             <br>
           </td>
         </tr>
@@ -111,78 +111,100 @@
     <!-- End page content -->
 
 
-<script>
+    <script>
+      function fetchdata(form) {
+        var tkn = "bdbd2d22b8fd4e99bab72f4998806117";
 
-  // Make the actual CORS request.
-  function makeCorsRequest(form) {
-    // This is a sample server that supports CORS.
-    var apiURL = "https://api.synopticdata.com/v2/stations/timeseries?"
-    var token = "bdbd2d22b8fd4e99bab72f4998806117"
-    var airport = form.airport;
-    var timeframe = form.timeframe;
-    var radius = form.radius;
-    var url = apiURL + "&token=" + token + "&stid=" + airport + "&recent=" + timeframe + "&radius=" + radius
-    var xhr = createCORSRequest('GET', url);
-    if (!xhr) {
-      alert('CORS not supported');
-      return;
-    }
+        var airport = form.airport;
+        var timeframe = form.timeframe;
+        var radius = form.radius;
+        $.getJSON('https://api.synopticdata.com/v2/stations/latest', {
+            // specify the request parameters here
+            stid: airport,
+            within: timeframe,
+            radius: radius,
+            token: tkn
 
-    // Response handlers.
-    xhr.onload = function () {
-      var text = xhr.responseText;
-      console.log(text);
-      var title = getTitle(text);
-      alert('Response from CORS request to ' + url + ': ' + title);
-    };
-
-    xhr.onerror = function () {
-      alert('Woops, there was an error making the request.');
-    };
-
-    xhr.send();
-  }
+          },
+          function (data) {
+            console.log(data)
+            /*
+             * do something with your returned data
+             */
+          }
+        };
 
 
-  // function apiSearch(form) {
-  //   var apiURL =
-  //     "https://www.aviationweather.gov/adds/dataserver_current/httpparam?dataSource=metars&requestType=retrieve&format=xml"
-  //   var airport = form.airport;
-  //   var timeframe = form.timeframe;
-  //   var radius = form.radius;
-  //   var url = apiURL + "&stationString=" + airport + "&hoursBeforeNow=" + timeframe + "&radialDistance=" + radius
-  //   var windowARGS = {
-  //     "stationString" : airport,
-  //     "hoursBeforeNow": timeframe,
-  //     "radialDistance": radius
-  //   };
+        // // Make the actual CORS request.
+        // function makeCorsRequest(form) {
+        //   // This is a sample server that supports CORS.
+        //   var apiURL = "https://api.synopticdata.com/v2/stations/timeseries?"
+        //   var token = "bdbd2d22b8fd4e99bab72f4998806117"
+        //   var airport = form.airport;
+        //   var timeframe = form.timeframe;
+        //   var radius = form.radius;
+        //   var url = apiURL + "&token=" + token + "&stid=" + airport + "&recent=" + timeframe + "&radius=" + radius
+        //   var xhr = createCORSRequest('GET', url);
+        //   if (!xhr) {
+        //     alert('CORS not supported');
+        //     return;
+        //   }
 
-  //   jsonFetch(apiURL, windowARGS, function (d) {
-  //     console.log(d);
+        //   // Response handlers.
+        //   xhr.onload = function () {
+        //     var text = xhr.responseText;
+        //     console.log(text);
+        //     var title = getTitle(text);
+        //     alert('Response from CORS request to ' + url + ': ' + title);
+        //   };
 
-  //   })
-  // }
+        //   xhr.onerror = function () {
+        //     alert('Woops, there was an error making the request.');
+        //   };
 
-  // function jsonFetch(url, args, callback) {
-  //   var request = new XMLHttpRequest();
-  //   request.open("GET", serialize(url, args))
-  //   request.onreadystatechange = function () {
-  //     if (request.readyState === 4 && request.status === 200) {
-  //       callback(JSON.parse(request.responseText))
-  //     }
-  //   }
-  //   request.send(null);
+        //   xhr.send();
+        // }
 
-  //   function serialize(url, obj) {
-  //     var str = ['?'];
-  //     for (var p in obj) {
-  //       if (obj.hasOwnProperty(p)) {
-  //         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-  //       }
-  //     }
-  //     return url + str.join("&");
-  //   }
-  // }
-</script>
+
+        // function apiSearch(form) {
+        //   var apiURL =
+        //     "https://www.aviationweather.gov/adds/dataserver_current/httpparam?dataSource=metars&requestType=retrieve&format=xml"
+        //   var airport = form.airport;
+        //   var timeframe = form.timeframe;
+        //   var radius = form.radius;
+        //   var url = apiURL + "&stationString=" + airport + "&hoursBeforeNow=" + timeframe + "&radialDistance=" + radius
+        //   var windowARGS = {
+        //     "stationString" : airport,
+        //     "hoursBeforeNow": timeframe,
+        //     "radialDistance": radius
+        //   };
+
+        //   jsonFetch(apiURL, windowARGS, function (d) {
+        //     console.log(d);
+
+        //   })
+        // }
+
+        // function jsonFetch(url, args, callback) {
+        //   var request = new XMLHttpRequest();
+        //   request.open("GET", serialize(url, args))
+        //   request.onreadystatechange = function () {
+        //     if (request.readyState === 4 && request.status === 200) {
+        //       callback(JSON.parse(request.responseText))
+        //     }
+        //   }
+        //   request.send(null);
+
+        //   function serialize(url, obj) {
+        //     var str = ['?'];
+        //     for (var p in obj) {
+        //       if (obj.hasOwnProperty(p)) {
+        //         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+        //       }
+        //     }
+        //     return url + str.join("&");
+        //   }
+        // }
+    </script>
 
 </html>

@@ -128,8 +128,11 @@
 
           },
           console.log("success"))
-          .done(function () {
-              console.log(data);
+          .done(function (data) {
+            $.each(data.items, function(i, item){
+              $.appendTo("main_results")
+            })
+              // console.log(data);
             }
             // function (data) {
             //   console.log("bang bang!")

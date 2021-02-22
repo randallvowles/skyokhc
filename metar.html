@@ -118,6 +118,7 @@
         var airport = form.airport;
         var timeframe = form.timeframe;
         var radius = form.radius;
+        console.log("bang!")
         $.getJSON('https://api.synopticdata.com/v2/stations/latest', {
             // specify the request parameters here
             stid: airport,
@@ -127,7 +128,7 @@
 
           },
           function (data) {
-            console.log("bang!")
+            console.log("bang bang!")
             console.log(data)
             /*
              * do something with your returned data

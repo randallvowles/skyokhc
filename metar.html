@@ -127,10 +127,12 @@
             token: tkn
 
           },
-          console.log("success"))
-          .done(function (data) {
+          console.log("success")
+          function (result) {
             console.log("trying...")
-              $.response.appendTo("main_results")
+              $.each(result,function (i, field){
+                $("main_results"),append(field + " ");
+              })
             })
               // console.log(data);
             

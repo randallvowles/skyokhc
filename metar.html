@@ -127,15 +127,18 @@
             token: tkn
 
           },
-          console.log(data)
-          // function (data) {
-          //   console.log("bang bang!")
-          //   console.log(data)
-          //   /*
-          //    * do something with your returned data
-          //    */
-          // })
-        )
+          console.log("success")
+          .done(function () {
+              console.log(data);
+            }
+            // function (data) {
+            //   console.log("bang bang!")
+            //   console.log(data)
+            //   /*
+            //    * do something with your returned data
+            //    */
+            // })
+          ))
       };
 
 

@@ -127,23 +127,22 @@
             token: tkn
 
           },
-          console.log("success")
           function (result) {
             console.log("trying...")
-              $.each(result,function (i, field){
-                $("main_results"),append(field + " ");
-              })
+            $.each(result, function (i, field) {
+              $("main_results"), append(field + " ");
             })
-              // console.log(data);
-            
-            // function (data) {
-            //   console.log("bang bang!")
-            //   console.log(data)
-            //   /*
-            //    * do something with your returned data
-            //    */
-            // })
-          
+          })
+        // console.log(data);
+
+        // function (data) {
+        //   console.log("bang bang!")
+        //   console.log(data)
+        //   /*
+        //    * do something with your returned data
+        //    */
+        // })
+
       };
 
 

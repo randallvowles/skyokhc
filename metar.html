@@ -112,43 +112,68 @@
 
 
     <script>
-      function fetchdata(form) {
         var tkn = "bdbd2d22b8fd4e99bab72f4998806117";
 
         var airport = form.airport;
         var timeframe = form.timeframe;
         var radius = form.radius;
-        // console.log("bang!")
-        $.getJSON('https://api.synopticdata.com/v2/stations/latest', {
-          // specify the request parameters here
-          stid: airport,
-          within: timeframe,
-          // radius: radius,
-          token: tkn
+      $(document).ready(function () {
+        $("button").click(function () {
+          $.getJSON('https://api.synopticdata.com/v2/stations/latest', {
+            // specify the request parameters here
+            stid: airport,
+            within: timeframe,
+            // radius: radius,
+            token: tkn
 
-        }, function (data) {
-          $.data.append("main_results")
+          }, function (data, status) {
+            console.log("Data: " + data + "\nStatus: " + status);
+          });
+        });
+      });
 
 
-            // <!-- 
-            //           function (result) {
-            //             console.log("trying...")
-            //             $.each(result, function (i, field) {
-            //               $("main_results").append(field + " ");
-            //             })
-          
-        })
-        // console.log(data);
 
-        // function (data) {
-        //   console.log("bang bang!")
-        //   console.log(data)
-        //   /*
-        //    * do something with your returned data
-        //    */
-        // })
 
-      };
+
+      // function fetchdata(form) {
+      //   var tkn = "bdbd2d22b8fd4e99bab72f4998806117";
+
+      //   var airport = form.airport;
+      //   var timeframe = form.timeframe;
+      //   var radius = form.radius;
+      //   // console.log("bang!")
+      //   $.getJSON('https://api.synopticdata.com/v2/stations/latest', {
+      //     // specify the request parameters here
+      //     stid: airport,
+      //     within: timeframe,
+      //     // radius: radius,
+      //     token: tkn
+
+      //   }, function (data) {
+      //     $.data.append("main_results")
+
+      //   })
+      // };
+      // <!-- 
+      //           function (result) {
+      //             console.log("trying...")
+      //             $.each(result, function (i, field) {
+      //               $("main_results").append(field + " ");
+      //             })
+
+
+      // console.log(data);
+
+      // function (data) {
+      //   console.log("bang bang!")
+      //   console.log(data)
+      //   /*
+      //    * do something with your returned data
+      //    */
+      // })
+
+
 
 
       // // Make the actual CORS request.

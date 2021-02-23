@@ -130,6 +130,7 @@
 
           }, function (data, status) {
             console.log("Data: " + data + "\nStatus: " + status);
+            $("main_results").append(data);
           });
         });
       });

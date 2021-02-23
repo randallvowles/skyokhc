@@ -85,7 +85,7 @@
           </td>
         </tr>
       </form>
-      <h5 id="main_results">Main Results</h5>
+      <div id="main_results"></div>
 
 
       <!-- <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
@@ -131,7 +131,7 @@
           }, function (data, status) {
             console.log("Data: " + data + "\nStatus: " + status);
             alert("Data: " + data + "\nStatus: " + status);
-            $("div").append(data);
+            $('#main_results').append(data);
           });
         });
       });

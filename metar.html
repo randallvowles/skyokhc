@@ -79,7 +79,7 @@
           <td align="left"> Airport: <input type="text" size="4" name="airport" id="airport"></td>
           <td align="left"> Timeframe: <input type="text" size="2" name="timeframe" id="timeframe"></td>
           <td align="left"> Radius: <input type="text" size="3" name="radius" id="radius"></td>
-          <td align="left"><input name="search" type="button" value="Search">
+          <td align="left"><input name="button" type="button" value="Search">
             <br>
           </td>
         </tr>
@@ -119,6 +119,7 @@
         var radius = "10";
       $(document).ready(function () {
         $("button").click(function () {
+          console.log("first")
           $.getJSON('https://api.synopticdata.com/v2/stations/latest', {
             // specify the request parameters here
             stid: airport,
